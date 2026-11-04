@@ -22,7 +22,7 @@
     </style>
   </defs>
   <rect width="2100" height="2760" fill="#E2E3DF"/>
-  <text x="147" y="71" font-size="16" font-weight="800" letter-spacing="3" fill="#0B3B2E">VELA</text>
+  <text x="147" y="71" font-size="12" font-weight="800" letter-spacing="2" fill="#0B3B2E">KADOSH LOVE</text>
   <text x="147" y="96" font-size="10" font-weight="600" letter-spacing="2.1" fill="#718078">EVERYDAY BANKING, MADE CALM</text>
   <text x="1953" y="82" text-anchor="end" font-size="11" font-weight="700" letter-spacing="1.5" fill="#718078">MOBILE APP  /  CORE SCREENS</text>
 
@@ -43,19 +43,19 @@
 
       <rect x="18" y="119" width="354" height="177" rx="23" class="card"/>
       <text x="195" y="146" text-anchor="middle" class="small muted">Total Balance</text>
-      <text x="174" y="188" text-anchor="middle" font-size="34" class="heavy">$24,560</text><text x="249" y="188" font-size="20" font-weight="600" fill="#8A9791">.40</text>
+      <text x="195" y="188" text-anchor="middle" font-size="24" class="heavy">UGX 90,873,480</text>
       <circle cx="326" cy="177" r="15" fill="#F4F6F5"/>
       <path d="M318 177q8-10 16 0-8 10-16 0m8-3v6" class="line" stroke="#5B6B65"/>
       <rect x="30" y="207" width="330" height="76" rx="15" fill="#EEF8F4" stroke="#A8D8C1" stroke-width="1.3" stroke-dasharray="4 4"/>
       <rect x="42" y="220" width="32" height="32" rx="10" fill="#DDF3EA"/>
       <path d="M50 229h16v13H50zM53 226h10M53 245h10M54 234h2m4 0h2" class="line" stroke="#0A6B52"/>
-      <text x="83" y="230" class="tiny muted">USD account · Tega</text>
+      <text x="83" y="230" class="tiny muted">UGX account · Tega</text>
       <text x="83" y="251" font-size="13" class="strong" letter-spacing=".8">2034 5578 21</text>
       <rect x="292" y="224" width="57" height="30" rx="10" fill="#0A6B52"/><text x="320.5" y="243" text-anchor="middle" class="tiny white strong">Copy</text>
 
       <rect x="18" y="310" width="354" height="108" rx="21" fill="url(#promo)"/>
       <circle cx="324" cy="359" r="58" fill="#3E886C" opacity=".24"/>
-      <text x="36" y="342" font-size="14" class="white strong">Save in Dollars.</text>
+      <text x="36" y="342" font-size="14" class="white strong">Save in Shillings.</text>
       <text x="36" y="361" font-size="13" class="white">Earn up to 8% Yearly.</text>
       <rect x="36" y="374" width="103" height="29" rx="15" fill="#0B3B2E"/>
       <text x="87.5" y="393" text-anchor="middle" class="tiny white strong">Start Saving</text>
@@ -76,15 +76,15 @@
       <rect x="18" y="580" width="354" height="217" rx="20" class="card"/>
       <circle cx="48" cy="619" r="18" fill="#EEF1F0"/><path d="M42 620h12m-5-5 5 5-5 5" class="line" stroke="#5B6B65"/>
       <text x="77" y="616" class="label">Chiamaka Obi</text><text x="77" y="634" class="tiny muted">Transfer in · Today, 2:39 PM</text>
-      <text x="353" y="623" text-anchor="end" class="label green">+$450<tspan fill="#91A39A" font-size="9">.00</tspan></text>
+      <text x="353" y="623" text-anchor="end" class="label green">+UGX 1,665,000</text>
       <path d="M34 649h322" stroke="#EEF1F0"/>
       <circle cx="48" cy="675" r="18" fill="#EEF1F0"/><path d="M44 665v8l6 4m-9-13h12v18H41z" class="line" stroke="#5B6B65"/>
       <text x="77" y="672" class="label">Electricity</text><text x="77" y="690" class="tiny muted">Bill payment · Today, 9:12 AM</text>
-      <text x="353" y="679" text-anchor="end" class="label">−$86<tspan fill="#91A39A" font-size="9">.50</tspan></text>
+      <text x="353" y="679" text-anchor="end" class="label">−UGX 320,050</text>
       <path d="M34 705h322" stroke="#EEF1F0"/>
       <circle cx="48" cy="733" r="18" fill="#EEF1F0"/><path d="M42 725h12v16H42zm3 3h6m-6 4h6" class="line" stroke="#5B6B65"/>
       <text x="77" y="730" class="label">Airtime top-up</text><text x="77" y="748" class="tiny muted">MTN · Yesterday</text>
-      <text x="353" y="737" text-anchor="end" class="label">−$20<tspan fill="#91A39A" font-size="9">.00</tspan></text>
+      <text x="353" y="737" text-anchor="end" class="label">−UGX 74,000</text>
 
       <rect x="18" y="758" width="354" height="66" rx="24" fill="#fff" filter="url(#softShadow)"/>
       <rect x="32" y="766" width="68" height="50" rx="18" fill="#DDF3EA"/>
@@ -109,9 +109,9 @@
       <rect x="18" y="111" width="354" height="100" rx="19" class="card"/>
       <rect x="32" y="130" width="42" height="42" rx="13" fill="#DDF3EA"/>
       <path d="M43 140h20v18H43zm3-4h14m-13 8h12m-12 5h12" class="line" stroke="#0A6B52"/>
-      <text x="86" y="143" class="small muted">From USD account · Tega</text>
-      <text x="86" y="165" class="label">Balance $24,560<tspan fill="#8A9791" font-size="10">.40</tspan></text>
-      <rect x="309" y="123" width="48" height="23" rx="12" fill="#DDF3EA"/><text x="333" y="139" text-anchor="middle" class="tiny green strong">USD</text>
+      <text x="86" y="143" class="small muted">From UGX account · Tega</text>
+      <text x="86" y="165" font-size="10" class="label">Balance UGX 90,873,480</text>
+      <rect x="309" y="123" width="48" height="23" rx="12" fill="#DDF3EA"/><text x="333" y="139" text-anchor="middle" class="tiny green strong">UGX</text>
 
       <text x="20" y="244" class="label">Send to</text>
       <g text-anchor="middle">
@@ -123,16 +123,16 @@
         <circle cx="339" cy="278" r="25" fill="none" stroke="#9CB6A9" stroke-width="1.5" stroke-dasharray="4 3"/><path d="M334 278h10m-5-5v10" class="line" stroke="#0A6B52"/><text x="339" y="316" font-size="9" class="muted">New</text>
       </g>
 
-      <text x="165" y="378" text-anchor="middle" font-size="52" font-weight="700">$250</text><text x="236" y="378" font-size="30" font-weight="500" fill="#91A39A">.00</text>
-      <rect x="286" y="337" width="2.5" height="47" rx="1" fill="#0A6B52"/>
+      <text x="195" y="378" text-anchor="middle" font-size="34" font-weight="700">UGX 925,000</text>
+      <rect x="318" y="337" width="2.5" height="47" rx="1" fill="#0A6B52"/>
       <rect x="107" y="397" width="176" height="32" rx="16" fill="#DDF3EA"/>
       <path d="M126 405l-4 9h6l-2 7 8-11h-6l2-5z" fill="#0A6B52"/>
       <text x="202" y="418" text-anchor="middle" class="tiny green strong">No fee · Arrives instantly</text>
-      <g font-size="11" text-anchor="middle" font-weight="700">
-        <rect x="20" y="443" width="78" height="34" rx="17" fill="#fff"/><text x="59" y="465">$50</text>
-        <rect x="108" y="443" width="78" height="34" rx="17" fill="#fff"/><text x="147" y="465">$100</text>
-        <rect x="196" y="443" width="78" height="34" rx="17" fill="#0B3B2E"/><text x="235" y="465" fill="#fff">$250</text>
-        <rect x="284" y="443" width="78" height="34" rx="17" fill="#fff"/><text x="323" y="465">$500</text>
+      <g font-size="7.5" text-anchor="middle" font-weight="700">
+        <rect x="20" y="443" width="78" height="34" rx="17" fill="#fff"/><text x="59" y="465">UGX 185,000</text>
+        <rect x="108" y="443" width="78" height="34" rx="17" fill="#fff"/><text x="147" y="465">UGX 370,000</text>
+        <rect x="196" y="443" width="78" height="34" rx="17" fill="#0B3B2E"/><text x="235" y="465" fill="#fff">UGX 925,000</text>
+        <rect x="284" y="443" width="78" height="34" rx="17" fill="#fff"/><text x="323" y="465">UGX 1,850,000</text>
       </g>
       <g text-anchor="middle" font-size="21" font-weight="700">
         <text x="75" y="529">1</text><text x="195" y="529">2</text><text x="315" y="529">3</text>
@@ -159,7 +159,7 @@
       <text x="195" y="157" text-anchor="middle" font-size="19" class="strong">CO</text>
       <circle cx="222" cy="176" r="12" fill="#0A6B52"/><path d="M217 176h8m-3-3 3 3-3 3" class="line" stroke="#fff" stroke-width="1.5"/>
       <text x="195" y="216" text-anchor="middle" class="small muted">You're sending</text>
-      <text x="170" y="261" text-anchor="middle" font-size="38" class="heavy">$250</text><text x="222" y="261" font-size="21" font-weight="600" fill="#8A9791">.00</text>
+      <text x="195" y="261" text-anchor="middle" font-size="27" class="heavy">UGX 925,000</text>
       <text x="195" y="286" text-anchor="middle" class="body muted">to <tspan class="strong" fill="#10201B">Chiamaka Obi</tspan></text>
 
       <rect x="18" y="311" width="354" height="350" rx="21" class="card"/>
@@ -167,7 +167,7 @@
       <path d="M36 356h318" stroke="#EEF1F0"/>
       <text x="36" y="385" class="small muted">Account</text><text x="354" y="385" text-anchor="end" class="small strong">GTBank · 0812 345 6789</text>
       <path d="M36 400h318" stroke="#EEF1F0"/>
-      <text x="36" y="429" class="small muted">From</text><text x="354" y="429" text-anchor="end" class="small strong">USD account · Tega</text>
+      <text x="36" y="429" class="small muted">From</text><text x="354" y="429" text-anchor="end" class="small strong">UGX account · Tega</text>
       <path d="M36 444h318" stroke="#EEF1F0"/>
       <text x="36" y="473" class="small muted">Transfer fee</text><text x="354" y="473" text-anchor="end" class="small green strong">Free</text>
       <path d="M36 488h318" stroke="#EEF1F0"/>
@@ -175,12 +175,12 @@
       <path d="M36 532h318" stroke="#EEF1F0"/>
       <text x="36" y="561" class="small muted">Note</text><text x="354" y="561" text-anchor="end" class="small strong">Saturday dinner</text>
       <path d="M36 576h318" stroke="#EEF1F0"/>
-      <text x="36" y="614" class="label">Total</text><text x="354" y="614" text-anchor="end" font-size="16" class="heavy">$250.00</text>
+      <text x="36" y="614" class="label">Total</text><text x="354" y="614" text-anchor="end" font-size="16" class="heavy">UGX 925,000</text>
       <path d="M117 691l2 3 5-6" class="line" stroke="#5B6B65"/>
       <rect x="116" y="688" width="15" height="17" rx="3" fill="none" stroke="#5B6B65" stroke-width="1.5"/>
-      <text x="140" y="701" class="tiny muted">You'll confirm with your Vela PIN</text>
+      <text x="140" y="701" class="tiny muted">You'll confirm with your KADOSH LOVE PIN</text>
       <rect x="18" y="727" width="354" height="57" rx="18" fill="#0A6B52" filter="url(#softShadow)"/>
-      <text x="195" y="762" text-anchor="middle" class="white strong" font-size="15">Send $250.00</text>
+      <text x="195" y="762" text-anchor="middle" class="white strong" font-size="15">Send UGX 925,000</text>
       <text x="195" y="814" text-anchor="middle" class="small muted strong">Cancel</text>
     </g>
     <rect width="390" height="844" rx="44" fill="none" stroke="#1B2924" stroke-width="2"/>
@@ -196,17 +196,17 @@
       <circle cx="195" cy="166" r="53" fill="#0A6B52"/>
       <path d="M173 166l15 15 31-33" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
       <text x="195" y="297" text-anchor="middle" font-size="28" class="heavy">Money sent!</text>
-      <text x="195" y="324" text-anchor="middle" class="body muted">$250.00 is on its way to Chiamaka Obi.</text>
+      <text x="195" y="324" text-anchor="middle" class="body muted">UGX 925,000 is on its way to Chiamaka Obi.</text>
       <text x="195" y="344" text-anchor="middle" class="body muted">She'll get it in a few seconds.</text>
 
       <rect x="22" y="382" width="346" height="258" rx="22" fill="#fff" stroke="#A8D8C1" stroke-width="1.5" stroke-dasharray="5 4"/>
-      <text x="44" y="413" class="small muted">Amount</text><text x="346" y="413" text-anchor="end" class="label">$250.00</text>
+      <text x="44" y="413" class="small muted">Amount</text><text x="346" y="413" text-anchor="end" class="label">UGX 925,000</text>
       <path d="M44 430h302" stroke="#EEF1F0"/>
       <text x="44" y="460" class="small muted">To</text><text x="346" y="460" text-anchor="end" class="label">Chiamaka Obi</text>
       <path d="M44 477h302" stroke="#EEF1F0"/>
       <text x="44" y="507" class="small muted">Date</text><text x="346" y="507" text-anchor="end" class="small strong">1 Nov 2026, 7:42 PM</text>
       <path d="M44 524h302" stroke="#EEF1F0"/>
-      <text x="44" y="554" class="small muted">Reference</text><text x="346" y="554" text-anchor="end" class="small strong">VLA-82731-TX</text>
+      <text x="44" y="554" class="small muted">Reference</text>      <text x="346" y="554" text-anchor="end" class="small strong">KDL-82731-TX</text>
       <path d="M44 571h302" stroke="#EEF1F0"/>
       <text x="44" y="607" class="small muted">Status</text>
       <rect x="265" y="585" width="81" height="27" rx="14" fill="#DDF3EA"/>
@@ -229,8 +229,8 @@
       <circle cx="42" cy="78" r="21" fill="#fff"/><path d="M47 70l-8 8 8 8m-8-8h15" class="line" stroke="#10201B"/>
       <text x="195" y="83" text-anchor="middle" font-size="16" class="heavy">Add Money</text>
       <rect x="18" y="111" width="354" height="64" rx="17" class="card"/>
-      <text x="36" y="150" class="small muted">USD balance</text>
-      <text x="354" y="149" text-anchor="end" font-size="16" class="heavy">$24,560<tspan fill="#91A39A" font-size="11">.40</tspan></text>
+      <text x="36" y="150" class="small muted">UGX balance</text>
+      <text x="354" y="149" text-anchor="end" font-size="11" class="heavy">UGX 90,873,480</text>
       <text x="20" y="208" class="label">Choose how to add money</text>
 
       <rect x="18" y="224" width="354" height="66" rx="17" fill="#fff" stroke="#0A6B52" stroke-width="1.5"/>
@@ -240,16 +240,16 @@
       <circle cx="348" cy="257" r="9" fill="none" stroke="#0A6B52" stroke-width="1.5"/><circle cx="348" cy="257" r="5" fill="#0A6B52"/>
 
       <rect x="18" y="300" width="354" height="242" rx="18" fill="#EEF8F4" stroke="#A8D8C1" stroke-width="1.3" stroke-dasharray="5 4"/>
-      <text x="34" y="325" font-size="10" font-weight="800" letter-spacing="1.1" fill="#0A6B52">YOUR USD ACCOUNT DETAILS</text>
+      <text x="34" y="325" font-size="10" font-weight="800" letter-spacing="1.1" fill="#0A6B52">YOUR UGX ACCOUNT DETAILS</text>
       <text x="34" y="354" class="tiny muted">Account name</text><text x="356" y="354" text-anchor="end" class="small strong">Tega</text>
       <path d="M34 364h322" stroke="#D7E9E0"/>
       <text x="34" y="390" class="tiny muted">Account number</text><text x="263" y="390" text-anchor="end" class="small strong" letter-spacing=".5">2034 5578 21</text>
       <rect x="304" y="373" width="45" height="24" rx="8" fill="#DDF3EA"/>
       <path d="M317 381h10v10h-10zm3-3h10v10" class="line" stroke="#0A6B52" stroke-width="1.3"/>
       <path d="M34 400h322" stroke="#D7E9E0"/>
-      <text x="34" y="426" class="tiny muted">Bank</text><text x="356" y="426" text-anchor="end" class="small strong">Vela MFB</text>
+      <text x="34" y="426" class="tiny muted">Bank</text><text x="356" y="426" text-anchor="end" class="small strong">KADOSH LOVE MFB</text>
       <path d="M34 436h322" stroke="#D7E9E0"/>
-      <text x="34" y="462" class="tiny muted">Account type</text><text x="356" y="462" text-anchor="end" class="small strong">USD current account</text>
+      <text x="34" y="462" class="tiny muted">Account type</text><text x="356" y="462" text-anchor="end" class="small strong">UGX current account</text>
       <rect x="32" y="478" width="326" height="48" rx="15" fill="#0A6B52"/>
       <text x="195" y="508" text-anchor="middle" class="small white strong">Share account details</text>
 
@@ -281,10 +281,10 @@
       <circle cx="338" cy="153" r="72" fill="#D8FA7A" opacity=".09"/>
       <circle cx="338" cy="153" r="48" fill="#D8FA7A" opacity=".06"/>
       <text x="38" y="145" class="small white" opacity=".75">Total savings</text>
-      <text x="38" y="190" font-size="33" class="white heavy">$3,240</text><text x="151" y="190" font-size="19" font-weight="600" fill="#A4B8AC">.00</text>
+      <text x="38" y="190" font-size="23" class="white heavy">UGX 11,988,000</text>
       <rect x="38" y="204" width="133" height="27" rx="14" fill="#D8FA7A"/>
       <text x="104.5" y="222" text-anchor="middle" class="tiny strong" fill="#16392B">Earning 8% yearly</text>
-      <text x="38" y="254" class="small white" opacity=".8">+$21.60 this month</text>
+      <text x="38" y="254" class="small white" opacity=".8">+UGX 79,920 this month</text>
       <rect x="38" y="272" width="146" height="40" rx="14" fill="#D8FA7A"/>
       <text x="111" y="297" text-anchor="middle" class="small strong" fill="#10382A">+ Add money</text>
       <rect x="195" y="272" width="141" height="40" rx="14" fill="#FFFFFF" fill-opacity=".08" stroke="#93AA9D" stroke-width="1"/>
@@ -296,10 +296,10 @@
       <rect x="18" y="378" width="354" height="112" rx="19" class="card"/>
       <rect x="31" y="391" width="40" height="40" rx="12" fill="#DDF3EA"/>
       <path d="M40 405h22v13H40zm3-4h16v4H43zm5 18h6" class="line" stroke="#0A6B52"/>
-      <text x="82" y="402" class="label">New laptop</text><text x="82" y="419" class="tiny muted">Saving $150 every week</text>
+      <text x="82" y="402" class="label">New laptop</text><text x="82" y="419" class="tiny muted">Saving UGX 555,000 every week</text>
       <text x="352" y="405" text-anchor="end" class="small green strong">71%</text>
       <rect x="82" y="433" width="270" height="5" rx="3" fill="#EEF1F0"/><rect x="82" y="433" width="192" height="5" rx="3" fill="#0A6B52"/>
-      <text x="82" y="469" class="tiny muted">$1,640 of $2,300</text>
+      <text x="82" y="469" class="tiny muted">UGX 6,068,000 of UGX 8,510,000</text>
 
       <rect x="18" y="500" width="354" height="112" rx="19" class="card"/>
       <rect x="31" y="513" width="40" height="40" rx="12" fill="#DDF3EA"/>
@@ -307,15 +307,15 @@
       <text x="82" y="524" class="label">Trip to Zanzibar</text><text x="82" y="541" class="tiny muted">Target: March 2027</text>
       <text x="352" y="527" text-anchor="end" class="small green strong">40%</text>
       <rect x="82" y="555" width="270" height="5" rx="3" fill="#EEF1F0"/><rect x="82" y="555" width="108" height="5" rx="3" fill="#0A6B52"/>
-      <text x="82" y="591" class="tiny muted">$1,200 of $3,000</text>
+      <text x="82" y="591" class="tiny muted">UGX 4,440,000 of UGX 11,100,000</text>
 
       <rect x="18" y="622" width="354" height="112" rx="19" class="card"/>
       <rect x="31" y="635" width="40" height="40" rx="12" fill="#DDF3EA"/>
       <path d="M51 641l13 5v9c0 8-6 13-13 16-7-3-13-8-13-16v-9zM45 655l4 4 8-9" class="line" stroke="#0A6B52"/>
-      <text x="82" y="646" class="label">Emergency fund</text><text x="82" y="663" class="tiny muted">Saving $100 every month</text>
+      <text x="82" y="646" class="label">Emergency fund</text><text x="82" y="663" class="tiny muted">Saving UGX 370,000 every month</text>
       <text x="352" y="649" text-anchor="end" class="small green strong">8%</text>
       <rect x="82" y="677" width="270" height="5" rx="3" fill="#EEF1F0"/><rect x="82" y="677" width="22" height="5" rx="3" fill="#0A6B52"/>
-      <text x="82" y="713" class="tiny muted">$400 of $5,000</text>
+      <text x="82" y="713" class="tiny muted">UGX 1,480,000 of UGX 18,500,000</text>
 
       <rect x="18" y="758" width="354" height="66" rx="24" fill="#fff" filter="url(#softShadow)"/>
       <path d="M51 783h16v13H51zm3-4h10" class="line" stroke="#84918B"/><text x="59" y="808" text-anchor="middle" font-size="9" class="muted">Home</text>

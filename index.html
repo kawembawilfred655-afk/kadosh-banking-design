@@ -1,68 +1,739 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#E2E3DF">
-    <meta name="description" content="Vela banking app design board featuring six core mobile screens.">
-    <title>Vela — Mobile Banking Screens</title>
-    <style>
-      * { box-sizing: border-box; }
-      body {
-        margin: 0;
-        background: #e2e3df;
-        color: #0b3b2e;
-        font: 500 14px/1.5 "Plus Jakarta Sans", "Segoe UI", sans-serif;
+<html lang="en-UG">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#F4F6F5">
+  <meta name="description" content="KADOSH LOVE — a mobile banking application prototype with Ugandan shilling demo balances.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="KADOSH LOVE">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="./app-icon.svg">
+  <link rel="apple-touch-icon" href="./app-icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>KADOSH LOVE — Mobile Banking</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: "Plus Jakarta Sans", sans-serif;
+      color: #10201b;
+      background: #e8ece9;
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+      --bg: #f4f6f5;
+      --card: #fff;
+      --green: #0a6b52;
+      --deep: #0b3b2e;
+      --lime: #d8fa7a;
+      --mint: #ddf3ea;
+      --mint-light: #eef8f4;
+      --ink: #10201b;
+      --muted: #64736d;
+      --line: #edf0ee;
+      --orange: #e8572a;
+      --shadow: 0 16px 40px rgb(16 32 27 / 9%);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; background: #e8ece9; }
+    button, input { font: inherit; }
+    button { color: inherit; }
+    button:focus-visible, input:focus-visible, a:focus-visible {
+      outline: 3px solid #80c9a7; outline-offset: 3px;
+    }
+    button:disabled { opacity: .48; cursor: not-allowed; }
+    .workspace {
+      display: grid; grid-template-columns: minmax(0, 410px) minmax(340px, 560px);
+      justify-content: center; gap: 48px; align-items: center;
+      width: min(1120px, 100%); min-height: 100svh; margin: auto; padding: 38px 28px;
+    }
+    .intro { max-width: 380px; }
+    .wordmark { display: flex; align-items: center; gap: 12px; color: var(--deep); }
+    .logo {
+      display: grid; place-items: center; width: 43px; height: 43px;
+      border-radius: 15px; background: var(--deep); color: var(--lime);
+      font-size: 15px; font-weight: 800; letter-spacing: -1px;
+    }
+    .wordmark span { font-size: 14px; font-weight: 800; letter-spacing: 1.8px; }
+    .intro h1 { margin: 24px 0 12px; font-size: clamp(32px, 5vw, 48px); line-height: 1.1; letter-spacing: -2.3px; }
+    .intro > p { color: var(--muted); line-height: 1.8; }
+    .notice {
+      margin-top: 20px; padding: 14px 16px; border: 1px solid #ead8a8;
+      border-radius: 15px; background: #fff9e9; color: #654d1b;
+      font-size: 11px; line-height: 1.7;
+    }
+    .links { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 19px; }
+    .links a { color: var(--green); font-size: 11px; font-weight: 700; text-decoration: none; }
+    .phone {
+      position: relative; width: 100%; max-width: 410px; height: min(852px, calc(100svh - 36px));
+      min-height: 690px; overflow: hidden; border: 7px solid #162720; border-radius: 42px;
+      background: var(--bg); box-shadow: var(--shadow);
+    }
+    .app { position: relative; display: flex; flex-direction: column; height: 100%; min-height: 0; background: var(--bg); }
+    .app-top {
+      position: relative; z-index: 1; display: flex; align-items: center; justify-content: space-between;
+      flex: 0 0 auto; min-height: 72px; padding: max(14px, env(safe-area-inset-top)) 19px 10px;
+    }
+    .identity { display: flex; align-items: center; gap: 10px; min-width: 0; }
+    .avatar {
+      display: grid; place-items: center; flex: 0 0 auto; width: 42px; height: 42px;
+      border: 3px solid white; border-radius: 50%; background: #d7ecdf; color: var(--deep);
+      font-size: 12px; font-weight: 800; box-shadow: 0 0 0 1px #dce5df;
+    }
+    .welcome { display: grid; gap: 1px; }
+    .welcome small { color: var(--muted); font-size: 10px; }
+    .welcome strong { font-size: 15px; }
+    .page-title { min-width: 0; margin: 0 auto; font-size: 15px; font-weight: 800; }
+    .icon-button {
+      position: relative; display: grid; place-items: center; flex: 0 0 auto; width: 42px; height: 42px;
+      border: 0; border-radius: 50%; background: white; cursor: pointer;
+    }
+    .icon-svg { display: block; flex: 0 0 auto; width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .success-check .icon-svg { width: 38px; height: 38px; stroke-width: 3; }
+    .fee-pill .icon-svg { width: 14px; height: 14px; }
+    .bell-dot { position: absolute; top: 8px; right: 7px; width: 8px; height: 8px; border: 1px solid white; border-radius: 50%; background: var(--orange); }
+    .scroll {
+      flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain;
+      padding: 6px 17px 26px; scrollbar-width: thin; scrollbar-color: #c9d6ce transparent;
+    }
+    .section { margin-top: 20px; }
+    .section:first-child { margin-top: 0; }
+    .section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin: 0 2px 11px; }
+    .section-heading h2 { margin: 0; font-size: 16px; letter-spacing: -.3px; }
+    .text-link { padding: 0; border: 0; background: none; color: var(--green); font-size: 11px; font-weight: 700; cursor: pointer; }
+    .card { border: 1px solid rgb(16 32 27 / 3%); border-radius: 20px; background: var(--card); }
+    .balance-card { padding: 18px 16px 13px; text-align: center; }
+    .overline { color: var(--muted); font-size: 11px; }
+    .balance-row { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 4px 0 12px; }
+    .balance { font-size: clamp(29px, 8vw, 38px); font-weight: 800; letter-spacing: -1.9px; line-height: 1.2; }
+    .eye { width: 30px; height: 30px; border: 0; border-radius: 50%; background: #f1f5f2; color: var(--muted); cursor: pointer; }
+    .eye svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.8; }
+    .account-strip { display: flex; align-items: center; gap: 10px; padding: 10px 11px; border: 1px dashed #9dd5b9; border-radius: 14px; background: var(--mint-light); text-align: left; }
+    .account-emblem, .method-icon, .goal-icon {
+      display: grid; place-items: center; flex: 0 0 auto; width: 38px; height: 38px;
+      border-radius: 12px; background: var(--mint); color: var(--green);
+    }
+    .account-copy { display: grid; flex: 1 1 auto; min-width: 0; gap: 3px; }
+    .account-copy small { color: var(--muted); font-size: 9px; }
+    .account-copy strong { overflow: hidden; font-size: 12px; letter-spacing: .45px; text-overflow: ellipsis; white-space: nowrap; }
+    .small-button { flex: 0 0 auto; padding: 8px 11px; border: 0; border-radius: 9px; background: var(--green); color: white; font-size: 10px; font-weight: 700; cursor: pointer; }
+    .hero {
+      position: relative; overflow: hidden; padding: 17px 18px; border-radius: 20px;
+      background: linear-gradient(125deg, #0a7255, #0b3b2e); color: white;
+    }
+    .hero::after { position: absolute; top: -34px; right: -14px; width: 146px; height: 146px; border-radius: 50%; background: rgb(216 250 122 / 9%); content: ""; }
+    .hero-copy { position: relative; z-index: 1; max-width: 75%; }
+    .hero h2 { margin: 0 0 4px; font-size: 16px; }
+    .hero p { margin: 0; color: #e0eee8; font-size: 11px; }
+    .hero-rate { position: absolute; top: 19px; right: 16px; color: var(--lime); font-size: 32px; font-weight: 800; transform: rotate(-8deg); }
+    .dark-pill, .lime-pill { display: inline-flex; align-items: center; justify-content: center; margin-top: 12px; padding: 8px 12px; border: 0; border-radius: 999px; background: #082f25; color: white; font-size: 10px; font-weight: 700; cursor: pointer; }
+    .lime-pill { background: var(--lime); color: var(--deep); }
+    .action-card { display: grid; grid-template-columns: repeat(3, 1fr); padding: 13px 8px 10px; }
+    .quick-action { display: grid; justify-items: center; gap: 7px; padding: 0 2px; border: 0; background: transparent; font-size: 10px; font-weight: 700; cursor: pointer; }
+    .action-icon { display: grid; place-items: center; width: 49px; height: 49px; border-radius: 50%; background: var(--green); color: white; }
+    .activity-card { overflow: hidden; padding: 0 12px; }
+    .activity-row { display: flex; align-items: center; gap: 10px; min-height: 65px; border-bottom: 1px solid var(--line); }
+    .activity-row:last-child { border-bottom: 0; }
+    .activity-icon { display: grid; place-items: center; flex: 0 0 auto; width: 36px; height: 36px; border-radius: 50%; background: #f0f3f1; color: #51635b; }
+    .activity-text { display: grid; flex: 1; min-width: 0; gap: 4px; }
+    .activity-text strong { overflow: hidden; font-size: 11px; text-overflow: ellipsis; white-space: nowrap; }
+    .activity-text small { overflow: hidden; color: var(--muted); font-size: 9px; text-overflow: ellipsis; white-space: nowrap; }
+    .money { flex: 0 0 auto; font-size: 11px; font-weight: 700; }
+    .money.in { color: var(--green); }
+    .money small { color: #89978f; font-size: 9px; font-weight: 500; }
+    .empty { padding: 24px 8px; color: var(--muted); font-size: 11px; text-align: center; }
+    .bottom-nav {
+      z-index: 2; display: grid; grid-template-columns: repeat(4, 1fr); flex: 0 0 auto; gap: 2px;
+      margin: 0 12px max(11px, env(safe-area-inset-bottom)); padding: 7px;
+      border: 1px solid rgb(16 32 27 / 3%); border-radius: 24px; background: white;
+      box-shadow: 0 5px 16px rgb(16 32 27 / 9%);
+    }
+    .nav-item { display: grid; justify-items: center; align-content: center; gap: 3px; min-height: 48px; border: 0; border-radius: 17px; background: transparent; color: #64736d; font-size: 8px; cursor: pointer; }
+    .nav-item.active { background: var(--mint); color: var(--green); font-weight: 700; }
+    .nav-item svg { width: 19px; height: 19px; }
+    .page-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 4px 2px 19px; }
+    .page-heading h1 { margin: 0; font-size: 23px; letter-spacing: -.9px; }
+    .page-heading .icon-button { margin-left: -5px; }
+    .from-card { display: flex; align-items: center; gap: 11px; padding: 13px; }
+    .from-copy { display: grid; flex: 1; gap: 5px; }
+    .from-copy small { color: var(--muted); font-size: 10px; }
+    .from-copy strong { font-size: 12px; }
+    .chip { padding: 6px 9px; border-radius: 99px; background: var(--mint); color: var(--green); font-size: 9px; font-weight: 700; }
+    .recipient-list { display: flex; gap: 10px; overflow: auto; padding: 5px 1px 3px; scrollbar-width: none; }
+    .recipient { display: grid; justify-items: center; flex: 0 0 58px; gap: 5px; padding: 0; border: 0; background: none; color: var(--muted); font-size: 8px; cursor: pointer; }
+    .recipient-face { display: grid; place-items: center; width: 45px; height: 45px; border: 2px solid transparent; border-radius: 50%; background: #e3ebe5; color: var(--deep); font-size: 11px; font-weight: 700; }
+    .recipient.selected { color: var(--green); font-weight: 700; }
+    .recipient.selected .recipient-face { border: 3px double white; outline: 2px solid var(--green); background: var(--green); color: white; }
+    .recipient.new .recipient-face { border: 1px dashed #91ae9e; background: transparent; color: var(--green); font-size: 20px; font-weight: 400; }
+    .amount-field { display: flex; align-items: center; justify-content: center; width: 100%; margin: 20px 0 8px; padding: 7px 0; border: 0; background: transparent; color: var(--ink); font-size: clamp(36px, 12vw, 52px); font-weight: 700; letter-spacing: -2px; text-align: center; }
+    .amount-field::placeholder { color: #a7b3ac; }
+    .amount-hint { color: var(--muted); font-size: 10px; text-align: center; }
+    .fee-pill { display: flex; justify-content: center; width: fit-content; margin: 12px auto; padding: 9px 13px; border-radius: 99px; background: var(--mint); color: var(--green); font-size: 10px; font-weight: 700; }
+    .quick-amounts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 7px; margin: 14px 0; }
+    .quick-amount { padding: 9px 2px; border: 0; border-radius: 99px; background: white; font-size: 10px; font-weight: 700; cursor: pointer; }
+    .quick-amount.selected { background: var(--deep); color: white; }
+    .keypad { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; }
+    .key { min-height: 43px; border: 0; border-radius: 13px; background: transparent; font-size: 19px; font-weight: 700; cursor: pointer; }
+    .key:active { background: #e7eeea; }
+    .primary, .secondary, .danger-button {
+      display: flex; align-items: center; justify-content: center; width: 100%; min-height: 51px;
+      padding: 13px 16px; border: 0; border-radius: 16px; font-size: 13px; font-weight: 700; cursor: pointer;
+    }
+    .primary { background: var(--green); color: white; box-shadow: 0 6px 15px rgb(10 107 82 / 17%); }
+    .secondary { border: 1px solid #dde5e0; background: white; color: var(--ink); }
+    .danger-button { border: 1px solid #f1d0ca; background: #fff8f6; color: #a83e28; }
+    .secondary .icon-svg { margin-right: 7px; }
+    .button-stack { display: grid; gap: 9px; margin-top: 15px; }
+    .screen-footer { flex: 0 0 auto; padding: 9px 17px max(14px, env(safe-area-inset-bottom)); background: var(--bg); }
+    .center-profile { display: grid; justify-items: center; gap: 6px; margin: 18px 0 19px; text-align: center; }
+    .center-profile .avatar { width: 70px; height: 70px; background: var(--mint); font-size: 18px; }
+    .center-profile > span { color: var(--muted); font-size: 11px; }
+    .review-total { margin: 0; font-size: 32px; letter-spacing: -1px; }
+    .review-name { margin: 0; color: var(--muted); font-size: 11px; }
+    .details-card { padding: 9px 14px; }
+    .detail-row { display: flex; justify-content: space-between; gap: 12px; padding: 11px 1px; border-bottom: 1px solid var(--line); font-size: 10px; }
+    .detail-row:last-child { border-bottom: 0; }
+    .detail-row span:first-child { color: var(--muted); }
+    .detail-row strong { text-align: right; }
+    .pin-note { display: flex; align-items: center; justify-content: center; gap: 7px; margin: 15px 0; color: var(--muted); font-size: 9px; }
+    .success-state { display: grid; justify-items: center; margin: 34px 0 24px; text-align: center; }
+    .success-ring { display: grid; place-items: center; width: 132px; height: 132px; margin-bottom: 19px; border: 8px solid var(--lime); border-radius: 50%; background: #eff8d8; }
+    .success-check { display: grid; place-items: center; width: 77px; height: 77px; border-radius: 50%; background: var(--green); color: white; font-size: 36px; }
+    .success-state h1 { margin: 0 0 8px; font-size: 25px; letter-spacing: -.7px; }
+    .success-state p { max-width: 280px; margin: 0; color: var(--muted); font-size: 11px; line-height: 1.7; }
+    .receipt { padding: 11px 14px; border: 1px dashed #94d0b1; border-radius: 17px; background: white; }
+    .completed { padding: 5px 8px; border-radius: 99px; background: var(--mint); color: var(--green); font-size: 9px; font-weight: 700; }
+    .savings-hero { position: relative; overflow: hidden; padding: 20px; border-radius: 21px; background: linear-gradient(135deg, #124936, #0b3026); color: white; }
+    .savings-hero::after { position: absolute; top: -35px; right: -14px; width: 150px; height: 150px; border-radius: 50%; background: rgb(216 250 122 / 8%); content: ""; }
+    .savings-hero > * { position: relative; z-index: 1; }
+    .savings-number { margin: 7px 0 9px; font-size: clamp(29px, 9vw, 38px); font-weight: 800; letter-spacing: -1.7px; }
+    .savings-hero small { color: #e1ece6; }
+    .hero-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin-top: 15px; }
+    .hero-buttons button { min-height: 40px; border: 0; border-radius: 13px; font-size: 10px; font-weight: 700; cursor: pointer; }
+    .hero-buttons .deposit { background: var(--lime); color: var(--deep); }
+    .hero-buttons .withdraw { border: 1px solid #789487; background: rgb(255 255 255 / 5%); color: white; }
+    .goal-card { padding: 12px; }
+    .goal-top { display: flex; align-items: flex-start; gap: 9px; }
+    .goal-copy { flex: 1; min-width: 0; }
+    .goal-copy strong { display: block; font-size: 11px; }
+    .goal-copy small { display: block; margin-top: 4px; color: var(--muted); font-size: 9px; }
+    .goal-percent { color: var(--green); font-size: 10px; font-weight: 700; }
+    .progress { height: 5px; margin: 11px 0 7px 47px; overflow: hidden; border-radius: 5px; background: #edf0ee; }
+    .progress span { display: block; height: 100%; border-radius: inherit; background: var(--green); }
+    .goal-foot { display: flex; justify-content: space-between; margin-left: 47px; color: var(--muted); font-size: 9px; }
+    .add-option { display: flex; align-items: center; gap: 11px; padding: 12px; }
+    .add-option.selected { border: 1.5px solid var(--green); }
+    .add-option-copy { flex: 1; }
+    .add-option-copy strong, .add-option-copy small { display: block; }
+    .add-option-copy strong { font-size: 11px; }
+    .add-option-copy small { margin-top: 4px; color: var(--muted); font-size: 9px; }
+    .account-details { padding: 14px; border: 1px dashed #a3d8bf; border-radius: 17px; background: var(--mint-light); }
+    .account-details h3 { margin: 0 0 7px; color: var(--green); font-size: 10px; letter-spacing: .8px; }
+    .setting-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 45px; border-bottom: 1px solid var(--line); font-size: 10px; }
+    .setting-row:last-child { border-bottom: 0; }
+    .setting-row span { color: var(--muted); }
+    .setting-row strong { text-align: right; }
+    .pay-card { padding: 18px; background: linear-gradient(135deg, #0c573f, #092f25); color: white; }
+    .pay-card .wordmark { color: white; }
+    .pay-card .logo { background: var(--lime); color: var(--deep); }
+    .pay-card-number { margin: 37px 0 21px; font-size: 15px; letter-spacing: 2px; }
+    .pay-card-footer { display: flex; justify-content: space-between; color: #e2eee8; font-size: 9px; }
+    .toast {
+      position: absolute; z-index: 5; right: 18px; bottom: 86px; left: 18px;
+      padding: 12px 15px; border-radius: 13px; background: var(--deep); color: white;
+      box-shadow: var(--shadow); font-size: 11px; text-align: center;
+      animation: toast-in .18s ease-out;
+    }
+    .toast.error { background: #9c3e2c; }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+    @keyframes toast-in { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: none; } }
+    @media (max-width: 760px) {
+      body { background: var(--bg); }
+      .workspace { display: block; min-height: 100svh; padding: 0; }
+      .intro { display: none; }
+      .phone { width: 100%; max-width: none; height: 100svh; min-height: 620px; border: 0; border-radius: 0; box-shadow: none; }
+      .app-top { min-height: 66px; padding-right: 17px; padding-left: 17px; }
+    }
+    @media (min-width: 761px) and (max-height: 760px) {
+      .workspace { align-items: start; padding-top: 20px; padding-bottom: 20px; }
+      .phone { height: calc(100svh - 40px); min-height: 620px; }
+    }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; } }
+  </style>
+</head>
+<body>
+  <main class="workspace">
+    <aside class="intro">
+      <div class="wordmark"><span class="logo">KL</span><span>KADOSH LOVE</span></div>
+      <h1>Money, made more meaningful.</h1>
+      <p>Your KADOSH LOVE banking experience, in Ugandan shillings. Explore the demo on your phone or install it from your browser.</p>
+      <div class="notice"><strong>DEMO APP</strong> · No real funds or bank accounts are connected. Transfers, card actions, and deposits are simulations. Currency figures use a fixed sample conversion of 1 USD = UGX 3,700; this is not a live exchange rate.</div>
+      <div class="links" aria-label="Download design files">
+        <a href="./kadosh-love-board.svg">Six-screen design (SVG)</a>
+        <a href="./kadosh-love-board.png">Board (PNG)</a>
+        <a href="./kadosh-love-board.pdf">Board (PDF)</a>
+      </div>
+    </aside>
+    <section class="phone" aria-label="KADOSH LOVE demo app">
+      <div class="app" id="app"></div>
+    </section>
+  </main>
+  <script>
+    (() => {
+      "use strict";
+
+      const DEMO_RATE = 3700;
+      const STORAGE_KEY = "kadosh-love-demo-v1";
+      const RECIPIENTS = [
+        { name: "Chiamaka Obi", initials: "CO", tint: "#d8e9e1" },
+        { name: "Tunde", initials: "TO", tint: "#dce9e5" },
+        { name: "Amaka", initials: "AN", tint: "#f1d9ca" },
+        { name: "David", initials: "DO", tint: "#dee4f1" }
+      ];
+      const DEFAULTS = {
+        balance: 90873480,
+        savings: 11988000,
+        cardFrozen: false,
+        goals: [
+          { id: "laptop", name: "New laptop", saved: 6068000, target: 8510000, note: "Saving UGX 555,000 every week" },
+          { id: "zanzibar", name: "Trip to Zanzibar", saved: 4440000, target: 11100000, note: "Target: March 2027" },
+          { id: "emergency", name: "Emergency fund", saved: 1480000, target: 18500000, note: "Saving UGX 370,000 every month" }
+        ],
+        activity: [
+          { id: "seed-1", title: "Chiamaka Obi", detail: "Transfer in · Today, 2:39 PM", amount: 1665000, type: "in", icon: "arrow-down" },
+          { id: "seed-2", title: "Electricity", detail: "Bill payment · Today, 9:12 AM", amount: -320050, type: "out", icon: "bolt" },
+          { id: "seed-3", title: "Airtime top-up", detail: "MTN · Yesterday", amount: -74000, type: "out", icon: "phone" }
+        ]
+      };
+      const icons = {
+        home: '<path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/>',
+        cards: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18m-14 5h4"/>',
+        savings: '<path d="M12 3 20 6v5c0 5-3 8-8 10-5-2-8-5-8-10V6z"/><path d="m8 12 3 3 5-6"/>',
+        me: '<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>',
+        bell: '<path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9m-8 13h4"/>',
+        back: '<path d="m15 18-6-6 6-6M9 12h12"/>',
+        help: '<circle cx="12" cy="12" r="9"/><path d="M9.6 9a2.5 2.5 0 0 1 4.8 1c0 2-2.4 2-2.4 4m0 3h.01"/>',
+        eye: '<path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6Z"/><circle cx="12" cy="12" r="2.5"/>',
+        transfer: '<path d="M4 8h15m-4-4 4 4-4 4M20 16H5m4-4-4 4 4 4"/>',
+        plus: '<path d="M12 5v14m-7-7h14"/>',
+        down: '<path d="M12 4v15m-6-6 6 6 6-6"/>',
+        up: '<path d="M12 20V5m-6 6 6-6 6 6"/>',
+        arrow: '<path d="M5 12h14m-6-6 6 6-6 6"/>',
+        "arrow-down": '<path d="M12 4v15m-6-6 6 6 6-6"/>',
+        bolt: '<path d="m13 2-3 8h7l-6 12 2-9H6z"/>',
+        phone: '<rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/>',
+        lock: '<rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 1 1 8 0v3m-4 5v2"/>',
+        bank: '<path d="m3 9 9-6 9 6M5 10v8m5-8v8m4-8v8m5-8v8M3 21h18M2 18h20"/>',
+        copy: '<rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/>',
+        share: '<path d="M12 16V4m-5 5 5-5 5 5M5 14v5a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-5"/>',
+        check: '<path d="m5 12 5 5L20 7"/>',
+        shield: '<path d="M12 3 20 6v5c0 5-3 8-8 10-5-2-8-5-8-10V6z"/>',
+        laptop: '<rect x="4" y="5" width="16" height="12" rx="1"/><path d="M2 20h20"/>',
+        trip: '<path d="m3 14 9-11 9 11M5 14h14l2 7H3zM8 18h.01m8 0h.01"/>',
+        close: '<path d="m18 6-12 12M6 6l12 12"/>',
+        trash: '<path d="M3 6h18m-2 0-.8 14H5.8L5 6m4 0V4h6v2m-5 4v6m4-6v6"/>',
+        backspace: '<path d="m3 12 5-7h13v14H8zM11 9l6 6m0-6-6 6"/>'
+      };
+      const svgIcon = (name, cls = "") => `<svg class="icon-svg ${cls}" viewBox="0 0 24 24" aria-hidden="true">${icons[name] || icons.shield}</svg>`;
+      const money = (value) => `UGX ${Math.round(Math.abs(Number(value) || 0)).toLocaleString("en-UG")}`;
+      const escapeHtml = (value) => String(value).replace(/[&<>"']/g, (char) => ({
+        "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+      })[char]);
+      const readState = () => {
+        try {
+          const stored = JSON.parse(localStorage.getItem(STORAGE_KEY));
+          if (!stored || typeof stored.balance !== "number" || !Array.isArray(stored.goals) || !Array.isArray(stored.activity)) {
+            return structuredClone(DEFAULTS);
+          }
+          return { ...structuredClone(DEFAULTS), ...stored };
+        } catch {
+          return structuredClone(DEFAULTS);
+        }
+      };
+      let state = readState();
+      let screen = "home";
+      let returnScreen = "home";
+      let amount = 925000;
+      let recipient = RECIPIENTS[0].name;
+      let hiddenBalance = false;
+      let toastTimer;
+      let installPrompt;
+      let lastReceipt;
+      const app = document.getElementById("app");
+
+      function persist() {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
       }
-      header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 20px;
-        max-width: 1540px;
-        margin: auto;
-        padding: 22px 28px;
+
+      function notify(message, error = false) {
+        document.querySelector(".toast")?.remove();
+        const toast = document.createElement("div");
+        toast.className = `toast${error ? " error" : ""}`;
+        toast.setAttribute("role", error ? "alert" : "status");
+        toast.textContent = message;
+        app.append(toast);
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => toast.remove(), 2800);
       }
-      .brand { font-size: 15px; font-weight: 800; letter-spacing: 3px; }
-      nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px; }
-      nav a {
-        padding: 9px 14px;
-        border: 1px solid #ccd3ce;
-        border-radius: 999px;
-        color: #0b3b2e;
-        font-size: 12px;
-        font-weight: 700;
-        text-decoration: none;
+
+      function bottomNav(active) {
+        const items = [["home", "Home"], ["cards", "Cards"], ["savings", "Savings"], ["me", "Me"]];
+        return `<nav class="bottom-nav" aria-label="Main navigation">${items.map(([id, title]) =>
+          `<button type="button" class="nav-item${active === id ? " active" : ""}" data-screen="${id}"${active === id ? ' aria-current="page"' : ""}>${svgIcon(id)}<span>${title}</span></button>`
+        ).join("")}</nav>`;
       }
-      nav a:hover, nav a:focus-visible { background: white; }
-      main { padding: 0 18px 30px; text-align: center; }
-      main img {
-        display: block;
-        width: min(100%, 1500px);
-        height: auto;
-        margin: 0 auto;
-        border-radius: 16px;
-        box-shadow: 0 16px 44px rgb(16 32 27 / 12%);
+
+      function topBar({ back = "", title = "", home = false } = {}) {
+        if (home) {
+          return `<header class="app-top"><div class="identity"><span class="avatar" aria-hidden="true">T</span><div class="welcome"><small>Welcome back</small><strong>Tega</strong></div></div><div class="wordmark"><span class="logo">KL</span></div><button class="icon-button" type="button" data-action="notify" aria-label="Notifications">${svgIcon("bell")}<span class="bell-dot"></span></button></header>`;
+        }
+        return `<header class="app-top"><button class="icon-button" type="button" data-action="${back}" aria-label="Go back">${svgIcon("back")}</button><h1 class="page-title">${escapeHtml(title)}</h1><button class="icon-button" type="button" data-action="help" aria-label="Help">${svgIcon("help")}</button></header>`;
       }
-      @media (max-width: 560px) {
-        header { align-items: flex-start; flex-direction: column; padding: 18px; }
-        nav { justify-content: flex-start; }
-        main { padding: 0 8px 18px; }
-        main img { border-radius: 8px; }
+
+      function accountCard() {
+        return `<div class="card balance-card"><span class="overline">Total Balance · UGX</span><div class="balance-row"><strong class="balance" aria-live="polite">${hiddenBalance ? "••••••••" : money(state.balance)}</strong><button class="eye" type="button" data-action="toggle-balance" aria-label="${hiddenBalance ? "Show" : "Hide"} balance">${svgIcon("eye")}</button></div><div class="account-strip"><span class="account-emblem">${svgIcon("bank")}</span><span class="account-copy"><small>UGX account · Tega</small><strong>2034 5578 21</strong></span><button class="small-button" type="button" data-action="copy-account">Copy</button></div></div>`;
       }
-    </style>
-  </head>
-  <body>
-    <header>
-      <div class="brand">VELA</div>
-      <nav aria-label="Download design files">
-        <a href="./vela-banking-board.svg">Vector SVG</a>
-        <a href="./vela-banking-board.png">High-res PNG</a>
-        <a href="./vela-banking-board.pdf">Vector PDF</a>
-      </nav>
-    </header>
-    <main>
-      <img src="./vela-banking-board.svg" alt="Vela mobile banking design board showing six screens in a three-column, two-row layout.">
-    </main>
-  </body>
+
+      function activityRows(items = state.activity) {
+        if (!items.length) return '<div class="empty">Your activity will appear here.</div>';
+        return items.slice(0, 6).map((item) => {
+          const sign = item.type === "in" ? "+" : "−";
+          return `<div class="activity-row"><span class="activity-icon">${svgIcon(item.icon || (item.type === "in" ? "arrow-down" : "bolt"))}</span><span class="activity-text"><strong>${escapeHtml(item.title)}</strong><small>${escapeHtml(item.detail)}</small></span><span class="money ${item.type === "in" ? "in" : ""}">${sign}${money(item.amount)}</span></div>`;
+        }).join("");
+      }
+
+      function renderHome() {
+        return `${topBar({ home: true })}<div class="scroll"><section class="section">${accountCard()}</section><section class="section"><div class="hero"><div class="hero-copy"><h2>Save in Shillings.</h2><p>Earn up to 8% yearly on your savings.</p><button class="dark-pill" type="button" data-screen="savings">Start saving</button></div><span class="hero-rate">8%</span></div></section><section class="section"><div class="card action-card"><button class="quick-action" type="button" data-action="open-send"><span class="action-icon">${svgIcon("transfer")}</span><span>Transfer</span></button><button class="quick-action" type="button" data-screen="add-money"><span class="action-icon">${svgIcon("plus")}</span><span>Add Money</span></button><button class="quick-action" type="button" data-screen="cards"><span class="action-icon">${svgIcon("cards")}</span><span>My Cards</span></button></div></section><section class="section"><div class="section-heading"><h2>Recent activity</h2><button class="text-link" type="button" data-action="see-activity">See all</button></div><div class="card activity-card">${activityRows()}</div></section><section class="section"><div class="notice" style="margin:0">Demo only · UGX values are estimated at 1 USD = 3,700 UGX. No real money is moved.</div></section></div>${bottomNav("home")}`;
+      }
+
+      function renderSend() {
+        const suggestions = [185000, 370000, 925000, 1850000];
+        return `${topBar({ back: "home", title: "Send money" })}<div class="scroll"><section class="section"><div class="card from-card"><span class="account-emblem">${svgIcon("bank")}</span><span class="from-copy"><small>From UGX account · Tega</small><strong>Balance ${money(state.balance)}</strong></span><span class="chip">UGX</span></div></section><section class="section"><div class="section-heading"><h2>Send to</h2><button class="text-link" type="button" data-action="new-recipient">+ New</button></div><div class="recipient-list">${RECIPIENTS.map((item, index) => `<button class="recipient${recipient === item.name ? " selected" : ""}" type="button" data-recipient="${escapeHtml(item.name)}"><span class="recipient-face" style="background:${recipient === item.name ? "" : item.tint}">${item.initials}</span><span>${escapeHtml(index === 0 ? "Chiamaka" : item.name)}</span></button>`).join("")}<button class="recipient new" type="button" data-action="new-recipient"><span class="recipient-face">+</span><span>New</span></button></div></section><section class="section"><label class="sr-only" for="send-amount">Amount to send in Ugandan shillings</label><input id="send-amount" class="amount-field" type="text" inputmode="numeric" autocomplete="off" value="${escapeHtml(Number(amount).toLocaleString("en-UG"))}" aria-describedby="send-hint"><div id="send-hint" class="amount-hint">Ugandan shillings · Demo transfer only</div><div class="fee-pill">${svgIcon("bolt")} &nbsp; No fee · Arrives instantly</div><div class="quick-amounts">${suggestions.map((value) => `<button class="quick-amount${Number(amount) === value ? " selected" : ""}" type="button" data-amount="${value}">${money(value)}</button>`).join("")}</div><div class="keypad" aria-label="Amount keypad">${["1","2","3","4","5","6","7","8","9",".","0","⌫"].map((key) => `<button class="key" type="button" data-key="${key}" aria-label="${key === "⌫" ? "Delete digit" : key}">${key === "?" ? svgIcon("backspace") : key}</button>`).join("")}</div></section></div><footer class="screen-footer"><button class="primary" type="button" data-action="review-transfer">Continue</button></footer>`;
+      }
+
+      function renderReview() {
+        return `${topBar({ back: "send", title: "Review transfer" })}<div class="scroll"><div class="center-profile"><span class="avatar">CO</span><span>You're sending</span><h2 class="review-total">${money(amount)}</h2><p class="review-name">to <strong>${escapeHtml(recipient)}</strong></p></div><div class="card details-card">${[["Recipient", recipient], ["Account", "GTBank · 0812 345 6789"], ["From", "UGX account · Tega"], ["Transfer fee", "Free"], ["Arrives", "Instantly"], ["Note", "Saturday dinner"]].map(([label, value]) => `<div class="detail-row"><span>${label}</span><strong>${escapeHtml(value)}</strong></div>`).join("")}<div class="detail-row"><strong>Total</strong><strong>${money(amount)}</strong></div></div><div class="pin-note">${svgIcon("lock")} Demo confirmation only · no PIN is collected</div></div><footer class="screen-footer"><button class="primary" type="button" data-action="confirm-transfer">Send ${money(amount)}</button><button class="text-link" style="display:block;margin:13px auto" type="button" data-screen="home">Cancel</button></footer>`;
+      }
+
+      function renderSuccess() {
+        const receipt = lastReceipt || { title: recipient, amount, reference: "KDL-DEMO" };
+        return `${topBar({ back: "home", title: "Transfer complete" })}<div class="scroll"><div class="success-state"><div class="success-ring"><span class="success-check">${svgIcon("check")}</span></div><h1>Money sent!</h1><p>${money(receipt.amount)} is on its way to ${escapeHtml(receipt.title)}. This was a simulated transfer.</p></div><div class="receipt">${[["Amount", money(receipt.amount)], ["To", receipt.title], ["Date", new Date(receipt.date || Date.now()).toLocaleString("en-UG", { dateStyle: "medium", timeStyle: "short" })], ["Reference", receipt.reference], ["Status", '<span class="completed">Demo complete</span>']].map(([key, value]) => `<div class="detail-row"><span>${key}</span><strong>${key === "Status" ? value : escapeHtml(value)}</strong></div>`).join("")}</div></div><footer class="screen-footer"><div class="button-stack"><button class="secondary" type="button" data-action="share-receipt">${svgIcon("share")} &nbsp; Share receipt</button><button class="primary" type="button" data-screen="home">Back to home</button></div></footer>`;
+      }
+
+      function goalCard(goal) {
+        const percent = Math.min(100, Math.round(goal.saved / goal.target * 100));
+        return `<article class="card goal-card"><div class="goal-top"><span class="goal-icon">${svgIcon(goal.id === "laptop" ? "laptop" : goal.id === "zanzibar" ? "trip" : "shield")}</span><span class="goal-copy"><strong>${escapeHtml(goal.name)}</strong><small>${escapeHtml(goal.note)}</small></span><span class="goal-percent">${percent}%</span></div><div class="progress" role="progressbar" aria-valuenow="${percent}" aria-valuemin="0" aria-valuemax="100" aria-label="${escapeHtml(goal.name)} progress"><span style="width:${percent}%"></span></div><div class="goal-foot"><span>${money(goal.saved)} of ${money(goal.target)}</span><button class="text-link" type="button" data-goal="${escapeHtml(goal.id)}" data-action="goal-deposit">Add</button></div></article>`;
+      }
+
+      function renderSavings() {
+        return `${topBar({ back: "home", title: "Savings" })}<div class="scroll"><section class="section"><div class="savings-hero"><span class="overline" style="color:#d8e6de">Total savings</span><p class="savings-number">${money(state.savings)}</p><span class="lime-pill">Earning 8% yearly</span><p style="margin:10px 0 0"><small>+${money(79920)} this month · demo estimate</small></p><div class="hero-buttons"><button class="deposit" type="button" data-action="savings-deposit">+ Add money</button><button class="withdraw" type="button" data-action="savings-withdraw">Withdraw</button></div></div></section><section class="section"><div class="section-heading"><h2>Your goals</h2><button class="text-link" type="button" data-action="new-goal">+ New goal</button></div><div style="display:grid;gap:10px">${state.goals.map(goalCard).join("") || '<div class="empty">Create a savings goal to get started.</div>'}</div></section></div>${bottomNav("savings")}`;
+      }
+
+      function renderAddMoney() {
+        return `${topBar({ back: returnScreen, title: "Add money" })}<div class="scroll"><section class="section"><div class="card from-card"><span class="from-copy"><small>UGX balance</small><strong>${money(state.balance)}</strong></span><span class="chip">UGX</span></div></section><section class="section"><div class="section-heading"><h2>Choose how to add money</h2></div><div class="card add-option selected"><span class="method-icon">${svgIcon("bank")}</span><span class="add-option-copy"><strong>Bank transfer</strong><small>Free · arrives in minutes (simulated)</small></span><span class="chip">Selected</span></div></section><section class="section"><div class="account-details"><h3>YOUR UGX ACCOUNT DETAILS</h3>${[["Account name", "Tega"], ["Account number", "2034 5578 21"], ["Bank", "KADOSH LOVE MFB"], ["Account type", "UGX current account"]].map(([label, value]) => `<div class="setting-row"><span>${label}</span><strong>${value === "2034 5578 21" ? `<button class="text-link" type="button" data-action="copy-account">${value} · Copy</button>` : value}</strong></div>`).join("")}<p style="margin:11px 0 0;color:var(--muted);font-size:9px">These are illustrative demo details, not a real deposit account.</p></div></section><section class="section"><div class="card add-option"><span class="method-icon">${svgIcon("cards")}</span><span class="add-option-copy"><strong>Debit card</strong><small>1.5% fee · demo only</small></span></div></section><section class="section"><button class="primary" style="width:100%" type="button" data-action="simulate-deposit">Simulate a deposit</button></section></div>${bottomNav("")}`;
+      }
+
+      function renderCards() {
+        return `${topBar({ back: "home", title: "My cards" })}<div class="scroll"><section class="section"><div class="pay-card card"><div class="wordmark"><span class="logo">KL</span><span>KADOSH LOVE</span></div><div class="pay-card-number">•••• &nbsp;•••• &nbsp;•••• &nbsp;2034</div><div class="pay-card-footer"><span>TEGA</span><span>DEMO · UGX</span></div></div></section><section class="section"><div class="card" style="padding:15px"><div class="setting-row"><span>Card status</span><strong>${state.cardFrozen ? "Frozen" : "Active · demo"}</strong></div><button class="${state.cardFrozen ? "primary" : "secondary"}" style="width:100%;margin-top:13px" type="button" data-action="toggle-card">${state.cardFrozen ? "Unfreeze demo card" : "Freeze demo card"}</button></div></section><section class="section"><div class="notice" style="margin:0">Demo card only. No actual card or payment details are stored.</div></section></div>${bottomNav("cards")}`;
+      }
+
+      function renderMe() {
+        return `${topBar({ back: "home", title: "My profile" })}<div class="scroll"><section class="section"><div class="card" style="padding:16px"><div class="identity"><span class="avatar" style="width:52px;height:52px">T</span><div class="welcome"><small>Account holder</small><strong>Tega</strong></div></div>${[["Bank", "KADOSH LOVE MFB"], ["Account", "UGX · 2034 5578 21"], ["Demo exchange rate", `1 USD = UGX ${DEMO_RATE.toLocaleString("en-UG")}`], ["Savings rate", "8% yearly · illustrative"]].map(([label, value]) => `<div class="setting-row"><span>${label}</span><strong>${value}</strong></div>`).join("")}</div></section><section class="section"><button class="secondary" style="width:100%" type="button" data-action="install">Install KADOSH LOVE</button></section><section class="section"><button class="danger-button" style="width:100%" type="button" data-action="reset">Reset demo data</button></section><section class="section"><div class="notice" style="margin:0">This prototype does not open accounts, collect PINs, connect to a real bank, or transfer funds.</div></section></div>${bottomNav("me")}`;
+      }
+
+      function render() {
+        const views = {
+          home: renderHome,
+          send: renderSend,
+          review: renderReview,
+          success: renderSuccess,
+          savings: renderSavings,
+          "add-money": renderAddMoney,
+          cards: renderCards,
+          me: renderMe
+        };
+        app.innerHTML = (views[screen] || renderHome)();
+      }
+
+      function addActivity(title, detail, value, type, icon) {
+        const record = {
+          id: `demo-${Date.now()}`,
+          title,
+          detail,
+          amount: value,
+          type,
+          icon,
+          kind: type === "in" ? "deposit" : "transfer",
+          reference: `KDL-DEMO-${Date.now().toString(36).toUpperCase()}`,
+          date: new Date().toISOString()
+        };
+        state.activity.unshift(record);
+        state.activity = state.activity.slice(0, 30);
+        lastReceipt = record;
+        persist();
+        return record;
+      }
+
+      function openAddMoney(from) {
+        returnScreen = from;
+        screen = "add-money";
+        render();
+      }
+
+      function parseAmountInput() {
+        const input = document.getElementById("send-amount");
+        const value = Number((input?.value || "").replace(/[^\d]/g, ""));
+        amount = Number.isSafeInteger(value) ? value : 0;
+      }
+
+      async function backendPost(record) {
+        const config = window.KADOSH_CONFIG || {};
+        if (!config.apiBase) return "local";
+        try {
+          const session = await window.KadoshAuth?.getSession?.();
+          if (!session?.access_token) return "local";
+          const response = await fetch(`${config.apiBase.replace(/\/$/, "")}/api/transactions`, {
+            method: "POST",
+            headers: { "content-type": "application/json", authorization: `Bearer ${session.access_token}` },
+            body: JSON.stringify({
+              kind: record.kind,
+              title: record.title,
+              detail: record.detail,
+              amount: record.amount,
+              reference: record.reference
+            })
+          });
+          if (!response.ok) throw new Error(`Backend returned ${response.status}`);
+          return "remote";
+        } catch (error) {
+          console.error("Demo SQL backend unavailable; saved only in this browser.", error);
+          return "local";
+        }
+      }
+
+      app.addEventListener("click", async (event) => {
+        const button = event.target.closest("button");
+        if (!button) return;
+        if (button.dataset.screen) {
+          screen = button.dataset.screen;
+          render();
+          return;
+        }
+        if (button.dataset.recipient) {
+          recipient = button.dataset.recipient;
+          render();
+          return;
+        }
+        if (button.dataset.amount) {
+          amount = Number(button.dataset.amount);
+          render();
+          document.getElementById("send-amount")?.focus();
+          return;
+        }
+        if (button.dataset.key) {
+          const input = document.getElementById("send-amount");
+          if (!input) return;
+          const digits = input.value.replace(/[^\d]/g, "");
+          input.value = button.dataset.key === "⌫" ? digits.slice(0, -1) : `${digits}${button.dataset.key}`;
+          parseAmountInput();
+          document.querySelectorAll(".quick-amount").forEach((item) => item.classList.toggle("selected", Number(item.dataset.amount) === amount));
+          return;
+        }
+        switch (button.dataset.action) {
+          case "home": screen = "home"; render(); break;
+          case "send": screen = "send"; render(); break;
+          case "back": screen = "home"; render(); break;
+          case "open-send": amount = 925000; screen = "send"; render(); break;
+          case "toggle-balance": hiddenBalance = !hiddenBalance; render(); break;
+          case "notify": notify("You're all caught up."); break;
+          case "help": notify("This is a demo. No real banking transactions are available."); break;
+          case "copy-account":
+            try { await navigator.clipboard.writeText("2034 5578 21"); notify("Illustrative account number copied."); }
+            catch { notify("Account number: 2034 5578 21"); }
+            break;
+          case "new-recipient": notify("New recipients are not connected in this demo."); break;
+          case "see-activity": notify(`Showing your ${state.activity.length} most recent demo activities.`); break;
+          case "review-transfer":
+            parseAmountInput();
+            if (!Number.isSafeInteger(amount) || amount <= 0) { notify("Enter a whole UGX amount above zero.", true); return; }
+            if (amount > state.balance) { notify("The demo balance is too low for this amount.", true); return; }
+            screen = "review"; render(); break;
+          case "confirm-transfer": {
+            if (amount <= 0 || amount > state.balance) { notify("Check the demo balance and try again.", true); screen = "send"; render(); return; }
+            state.balance -= amount;
+            const transaction = addActivity(recipient, "Demo transfer · just now", amount, "out", "arrow");
+            persist();
+            screen = "success";
+            render();
+            const backend = await backendPost(transaction);
+            if (backend === "remote") notify("Simulated transfer saved to the demo database.");
+            else notify("Simulated transfer saved on this device.");
+            break;
+          }
+          case "share-receipt":
+            if (!lastReceipt) { notify("No demo receipt to share."); return; }
+            try {
+              const text = `KADOSH LOVE demo receipt: ${money(lastReceipt.amount)} to ${lastReceipt.title}. Demo only; no real funds moved.`;
+              if (navigator.share) await navigator.share({ title: "KADOSH LOVE demo receipt", text });
+              else { await navigator.clipboard.writeText(text); notify("Demo receipt copied."); }
+            } catch (error) {
+              if (error.name !== "AbortError") notify("Unable to share the receipt.", true);
+            }
+            break;
+          case "savings-deposit":
+          case "goal-deposit": {
+            const goal = button.dataset.goal ? state.goals.find((item) => item.id === button.dataset.goal) : state.goals[0];
+            if (!goal) { notify("Create a savings goal first."); return; }
+            const amountText = prompt(`How much UGX would you like to move from your demo balance to ${goal.name}?`);
+            if (amountText === null) return;
+            const contribution = Number(amountText.replace(/[^\d]/g, ""));
+            if (!Number.isSafeInteger(contribution) || contribution <= 0 || contribution > state.balance) { notify("Enter a valid amount within your demo balance.", true); return; }
+            state.balance -= contribution;
+            state.savings += contribution;
+            goal.saved += contribution;
+            const contributionRecord = addActivity(goal.name, "Savings contribution · just now", contribution, "out", "savings");
+            contributionRecord.kind = "savings_contribution";
+            persist();
+            await backendPost(contributionRecord);
+            render();
+            notify("Demo contribution saved.");
+            break;
+          }
+          case "savings-withdraw": {
+            const withdrawable = Math.min(state.savings, 100000);
+            if (!withdrawable) { notify("There are no demo savings to withdraw."); return; }
+            if (!confirm(`Move ${money(withdrawable)} from demo savings to your demo balance?`)) return;
+            state.savings -= withdrawable;
+            state.balance += withdrawable;
+            const withdrawalRecord = addActivity("Savings withdrawal", "Demo savings · just now", withdrawable, "in", "arrow-down");
+            withdrawalRecord.kind = "withdrawal";
+            persist();
+            await backendPost(withdrawalRecord);
+            render();
+            notify("Demo withdrawal completed.");
+            break;
+          }
+          case "new-goal": {
+            const name = prompt("Name your savings goal");
+            if (!name?.trim()) return;
+            state.goals.push({ id: `goal-${Date.now()}`, name: name.trim().slice(0, 42), saved: 0, target: 370000, note: "A new demo savings goal" });
+            persist();
+            render();
+            notify("Savings goal created.");
+            break;
+          }
+          case "simulate-deposit": {
+            const input = prompt("Enter the UGX amount for this simulated deposit.");
+            if (input === null) return;
+            const deposit = Number(input.replace(/[^\d]/g, ""));
+            if (!Number.isSafeInteger(deposit) || deposit <= 0 || deposit > 100000000) { notify("Enter a valid demo amount.", true); return; }
+            state.balance += deposit;
+            const depositRecord = addActivity("Demo bank transfer", "Simulated deposit · just now", deposit, "in", "arrow-down");
+            persist();
+            await backendPost(depositRecord);
+            render();
+            notify("Simulated deposit added to your demo balance.");
+            break;
+          }
+          case "toggle-card":
+            state.cardFrozen = !state.cardFrozen;
+            persist();
+            render();
+
+            window.addEventListener("kadosh:remote-transactions", (event) => {
+              const remoteItems = event.detail?.transactions;
+              if (!Array.isArray(remoteItems) || !remoteItems.length) return;
+              const remote = remoteItems.map((item) => ({
+                id: item.id,
+                title: item.title,
+                detail: item.detail || "Demo transaction",
+                amount: Number(item.amount_ugx),
+                type: item.kind === "deposit" || item.kind === "withdrawal" ? "in" : "out",
+                kind: item.kind,
+                reference: item.reference,
+                date: item.created_at,
+                icon: item.kind === "deposit" ? "arrow-down" : item.kind === "transfer" ? "arrow" : "savings"
+              }));
+              const localOnly = state.activity.filter((item) => !remote.some((entry) => entry.reference === item.reference));
+              state.activity = [...localOnly, ...remote].slice(0, 30);
+              persist();
+              if (screen === "home") render();
+            });
+            notify(state.cardFrozen ? "Demo card frozen." : "Demo card unfrozen.");
+            break;
+          case "install":
+            if (installPrompt) {
+              installPrompt.prompt();
+              await installPrompt.userChoice;
+              installPrompt = null;
+            } else notify("Use your browser menu and choose Install app or Add to Home Screen.");
+            break;
+          case "reset":
+            if (!confirm("Reset all KADOSH LOVE demo changes on this device?")) return;
+            localStorage.removeItem(STORAGE_KEY);
+            state = structuredClone(DEFAULTS);
+            amount = 925000;
+            screen = "home";
+            render();
+            notify("Demo data reset.");
+            break;
+        }
+      });
+
+      app.addEventListener("input", (event) => {
+        if (event.target.id !== "send-amount") return;
+        const digits = event.target.value.replace(/[^\d]/g, "").slice(0, 12);
+        amount = Number(digits) || 0;
+        const start = event.target.selectionStart;
+        event.target.value = digits ? Number(digits).toLocaleString("en-UG") : "";
+        event.target.setSelectionRange(Math.min(start, event.target.value.length), Math.min(start, event.target.value.length));
+        document.querySelectorAll(".quick-amount").forEach((item) => item.classList.toggle("selected", Number(item.dataset.amount) === amount));
+      });
+
+      window.addEventListener("beforeinstallprompt", (event) => {
+        event.preventDefault();
+        installPrompt = event;
+      });
+
+      render();
+
+      if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("./service-worker.js").catch((error) => {
+            console.warn("Offline app cache could not be enabled.", error);
+          });
+        });
+      }
+    })();
+  </script>
+  <script src="./public-config.js"></script>
+  <script type="module">
+    try {
+      const config = window.KADOSH_CONFIG || {};
+      if (config.supabaseUrl && config.supabaseAnonKey && config.apiBase) {
+        const { createClient } = await import("https://esm.sh/@supabase/supabase-js@2");
+        const client = createClient(config.supabaseUrl, config.supabaseAnonKey);
+        let { data, error } = await client.auth.getSession();
+        if (error) throw error;
+        if (!data.session) {
+          ({ data, error } = await client.auth.signInAnonymously());
+          if (error) throw error;
+        }
+        window.KadoshAuth = {
+          getSession: async () => (await client.auth.getSession()).data.session
+        };
+        const session = data.session;
+        const response = await fetch(`${config.apiBase.replace(/\/$/, "")}/api/transactions`, {
+          headers: { authorization: `Bearer ${session.access_token}` }
+        });
+        if (!response.ok) throw new Error(`Transaction sync returned ${response.status}`);
+        const result = await response.json();
+        window.dispatchEvent(new CustomEvent("kadosh:remote-transactions", { detail: result }));
+      }
+    } catch (error) {
+      console.warn("SQL demo service unavailable; using local browser storage.", error);
+    }
+  </script>
+</body>
 </html>
