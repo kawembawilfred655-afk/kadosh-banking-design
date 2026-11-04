@@ -1,0 +1,19 @@
+{
+  "name": "KADOSH LOVE Mobile Banking",
+  "short_name": "KADOSH LOVE",
+  "description": "Installable Ugandan shilling mobile banking demo.",
+  "lang": "en-UG",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F4F6F5",
+  "theme_color": "#0B3B2E",
+  "icons": [
+    {
+      "src": "./app-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

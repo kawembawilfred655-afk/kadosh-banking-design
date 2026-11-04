@@ -1,0 +1,12 @@
+{
+  "name": "kadosh-love-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "KADOSH LOVE UGX mobile banking prototype and demo transaction API.",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.57.0"
+  }
+}
