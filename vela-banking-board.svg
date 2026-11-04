@@ -1,0 +1,329 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2100" height="2760" viewBox="0 0 2100 2760">
+  <defs>
+    <linearGradient id="promo" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0A6B52"/><stop offset="1" stop-color="#0B3B2E"/></linearGradient>
+    <linearGradient id="hero" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#124B39"/><stop offset="1" stop-color="#092D24"/></linearGradient>
+    <linearGradient id="lime" x1="0" y1="0" x2="0.9" y2="1"><stop stop-color="#E9FFAA"/><stop offset="1" stop-color="#C8F453"/></linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#27362F" flood-opacity=".15"/></filter>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="5" stdDeviation="8" flood-color="#1B4434" flood-opacity=".12"/></filter>
+    <clipPath id="clip1"><rect width="390" height="844" rx="44"/></clipPath>
+    <clipPath id="clip2"><rect width="390" height="844" rx="44"/></clipPath>
+    <clipPath id="clip3"><rect width="390" height="844" rx="44"/></clipPath>
+    <clipPath id="clip4"><rect width="390" height="844" rx="44"/></clipPath>
+    <clipPath id="clip5"><rect width="390" height="844" rx="44"/></clipPath>
+    <clipPath id="clip6"><rect width="390" height="844" rx="44"/></clipPath>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap');
+      text{font-family:'Plus Jakarta Sans',Arial,sans-serif;fill:#10201B}
+      .muted{fill:#5B6B65}.green{fill:#0A6B52}.white{fill:#fff}.tiny{font-size:10px}.small{font-size:11px}.body{font-size:12px}.label{font-size:13px;font-weight:600}.strong{font-weight:700}.heavy{font-weight:800}
+      .line{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+      .screen{fill:#F4F6F5}
+      .card{fill:#fff}
+      .pill{fill:#DDF3EA}
+    </style>
+  </defs>
+  <rect width="2100" height="2760" fill="#E2E3DF"/>
+  <text x="147" y="71" font-size="16" font-weight="800" letter-spacing="3" fill="#0B3B2E">VELA</text>
+  <text x="147" y="96" font-size="10" font-weight="600" letter-spacing="2.1" fill="#718078">EVERYDAY BANKING, MADE CALM</text>
+  <text x="1953" y="82" text-anchor="end" font-size="11" font-weight="700" letter-spacing="1.5" fill="#718078">MOBILE APP  /  CORE SCREENS</text>
+
+  <!-- Screen 1: Home -->
+  <g transform="translate(147 150) scale(1.4)">
+    <rect width="390" height="844" rx="44" class="screen" filter="url(#shadow)"/>
+    <g clip-path="url(#clip1)">
+      <rect width="390" height="844" class="screen"/>
+      <circle cx="42" cy="79" r="24" fill="#fff" stroke="#fff" stroke-width="4"/>
+      <circle cx="42" cy="78" r="20" fill="#DDF3EA"/>
+      <path d="M27 89c2-9 9-13 15-13s13 4 15 13" fill="#7CBAA0"/>
+      <circle cx="42" cy="70" r="7" fill="#D4A27B"/>
+      <path d="M31 70c1-8 7-12 13-11 5 1 8 4 9 10-5-3-13-3-22 1" fill="#3B302A"/>
+      <text x="77" y="72" class="small muted">Welcome back</text><text x="77" y="94" font-size="17" class="heavy">Tega</text>
+      <circle cx="342" cy="80" r="22" fill="#fff"/>
+      <path d="M335 82v-5a7 7 0 0 1 14 0v5l3 4h-20l3-4m5 8h4" class="line" stroke="#10201B"/>
+      <circle cx="352" cy="65" r="4" fill="#E8572A"/>
+
+      <rect x="18" y="119" width="354" height="177" rx="23" class="card"/>
+      <text x="195" y="146" text-anchor="middle" class="small muted">Total Balance</text>
+      <text x="174" y="188" text-anchor="middle" font-size="34" class="heavy">$24,560</text><text x="249" y="188" font-size="20" font-weight="600" fill="#8A9791">.40</text>
+      <circle cx="326" cy="177" r="15" fill="#F4F6F5"/>
+      <path d="M318 177q8-10 16 0-8 10-16 0m8-3v6" class="line" stroke="#5B6B65"/>
+      <rect x="30" y="207" width="330" height="76" rx="15" fill="#EEF8F4" stroke="#A8D8C1" stroke-width="1.3" stroke-dasharray="4 4"/>
+      <rect x="42" y="220" width="32" height="32" rx="10" fill="#DDF3EA"/>
+      <path d="M50 229h16v13H50zM53 226h10M53 245h10M54 234h2m4 0h2" class="line" stroke="#0A6B52"/>
+      <text x="83" y="230" class="tiny muted">USD account · Tega</text>
+      <text x="83" y="251" font-size="13" class="strong" letter-spacing=".8">2034 5578 21</text>
+      <rect x="292" y="224" width="57" height="30" rx="10" fill="#0A6B52"/><text x="320.5" y="243" text-anchor="middle" class="tiny white strong">Copy</text>
+
+      <rect x="18" y="310" width="354" height="108" rx="21" fill="url(#promo)"/>
+      <circle cx="324" cy="359" r="58" fill="#3E886C" opacity=".24"/>
+      <text x="36" y="342" font-size="14" class="white strong">Save in Dollars.</text>
+      <text x="36" y="361" font-size="13" class="white">Earn up to 8% Yearly.</text>
+      <rect x="36" y="374" width="103" height="29" rx="15" fill="#0B3B2E"/>
+      <text x="87.5" y="393" text-anchor="middle" class="tiny white strong">Start Saving</text>
+      <text x="295" y="377" text-anchor="middle" font-size="48" font-weight="800" fill="#D8FA7A" transform="rotate(-10 295 377)">8%</text>
+      <path d="M266 387l49 7 23-8" fill="none" stroke="#A7CB49" stroke-width="2" opacity=".65"/>
+
+      <rect x="18" y="432" width="354" height="101" rx="21" class="card"/>
+      <g fill="#0A6B52">
+        <circle cx="84" cy="469" r="27"/><circle cx="195" cy="469" r="27"/><circle cx="306" cy="469" r="27"/>
+      </g>
+      <path d="M76 469h16m-6-6 6 6-6 6m103-6h16m-6-6 6 6-6 6m105-8h16m-8-8v16m-8-8h16" class="line" stroke="#fff"/>
+      <text x="84" y="516" text-anchor="middle" class="small strong">Transfer</text>
+      <text x="195" y="516" text-anchor="middle" class="small strong">Add Money</text>
+      <text x="306" y="516" text-anchor="middle" class="small strong">More</text>
+
+      <text x="20" y="568" font-size="16" class="heavy">Recent Activity</text>
+      <text x="368" y="568" text-anchor="end" class="small green strong">See all</text>
+      <rect x="18" y="580" width="354" height="217" rx="20" class="card"/>
+      <circle cx="48" cy="619" r="18" fill="#EEF1F0"/><path d="M42 620h12m-5-5 5 5-5 5" class="line" stroke="#5B6B65"/>
+      <text x="77" y="616" class="label">Chiamaka Obi</text><text x="77" y="634" class="tiny muted">Transfer in · Today, 2:39 PM</text>
+      <text x="353" y="623" text-anchor="end" class="label green">+$450<tspan fill="#91A39A" font-size="9">.00</tspan></text>
+      <path d="M34 649h322" stroke="#EEF1F0"/>
+      <circle cx="48" cy="675" r="18" fill="#EEF1F0"/><path d="M44 665v8l6 4m-9-13h12v18H41z" class="line" stroke="#5B6B65"/>
+      <text x="77" y="672" class="label">Electricity</text><text x="77" y="690" class="tiny muted">Bill payment · Today, 9:12 AM</text>
+      <text x="353" y="679" text-anchor="end" class="label">−$86<tspan fill="#91A39A" font-size="9">.50</tspan></text>
+      <path d="M34 705h322" stroke="#EEF1F0"/>
+      <circle cx="48" cy="733" r="18" fill="#EEF1F0"/><path d="M42 725h12v16H42zm3 3h6m-6 4h6" class="line" stroke="#5B6B65"/>
+      <text x="77" y="730" class="label">Airtime top-up</text><text x="77" y="748" class="tiny muted">MTN · Yesterday</text>
+      <text x="353" y="737" text-anchor="end" class="label">−$20<tspan fill="#91A39A" font-size="9">.00</tspan></text>
+
+      <rect x="18" y="758" width="354" height="66" rx="24" fill="#fff" filter="url(#softShadow)"/>
+      <rect x="32" y="766" width="68" height="50" rx="18" fill="#DDF3EA"/>
+      <path d="M55 783h16v13H55zm3-4h10" class="line" stroke="#0A6B52"/>
+      <text x="63" y="808" text-anchor="middle" font-size="9" class="green strong">Home</text>
+      <path d="M139 782h21v14h-21z" class="line" stroke="#84918B"/><text x="150" y="808" text-anchor="middle" font-size="9" class="muted">Cards</text>
+      <path d="M239 780h15v17h-15zM243 777h7" class="line" stroke="#84918B"/><text x="246" y="808" text-anchor="middle" font-size="9" class="muted">Savings</text>
+      <circle cx="330" cy="785" r="7" class="line" stroke="#84918B"/><path d="M318 798q12-12 24 0" class="line" stroke="#84918B"/><text x="330" y="808" text-anchor="middle" font-size="9" class="muted">Me</text>
+    </g>
+    <rect width="390" height="844" rx="44" fill="none" stroke="#1B2924" stroke-width="2"/>
+  </g>
+
+  <!-- Screen 2: Send Money -->
+  <g transform="translate(777 150) scale(1.4)">
+    <rect width="390" height="844" rx="44" class="screen" filter="url(#shadow)"/>
+    <g clip-path="url(#clip2)">
+      <rect width="390" height="844" class="screen"/>
+      <circle cx="42" cy="78" r="21" fill="#fff"/><path d="M47 70l-8 8 8 8m-8-8h15" class="line" stroke="#10201B"/>
+      <text x="195" y="83" text-anchor="middle" font-size="16" class="heavy">Send Money</text>
+      <circle cx="348" cy="78" r="21" fill="#fff"/><path d="M344 72q1-3 5-3 6 0 6 5 0 3-5 5v3m0 4h.1" class="line" stroke="#10201B"/>
+
+      <rect x="18" y="111" width="354" height="100" rx="19" class="card"/>
+      <rect x="32" y="130" width="42" height="42" rx="13" fill="#DDF3EA"/>
+      <path d="M43 140h20v18H43zm3-4h14m-13 8h12m-12 5h12" class="line" stroke="#0A6B52"/>
+      <text x="86" y="143" class="small muted">From USD account · Tega</text>
+      <text x="86" y="165" class="label">Balance $24,560<tspan fill="#8A9791" font-size="10">.40</tspan></text>
+      <rect x="309" y="123" width="48" height="23" rx="12" fill="#DDF3EA"/><text x="333" y="139" text-anchor="middle" class="tiny green strong">USD</text>
+
+      <text x="20" y="244" class="label">Send to</text>
+      <g text-anchor="middle">
+        <circle cx="51" cy="278" r="25" fill="#0A6B52" stroke="#fff" stroke-width="3"/><circle cx="51" cy="278" r="28" fill="none" stroke="#0A6B52" stroke-width="2"/>
+        <text x="51" y="282" font-size="10" class="white strong">CO</text><text x="51" y="316" font-size="9" class="green strong">Chiamaka</text>
+        <circle cx="123" cy="278" r="25" fill="#D8E9E1"/><text x="123" y="282" font-size="10" class="strong">TO</text><text x="123" y="316" font-size="9" class="muted">Tunde</text>
+        <circle cx="195" cy="278" r="25" fill="#F1D9CA"/><text x="195" y="282" font-size="10" class="strong">AN</text><text x="195" y="316" font-size="9" class="muted">Amaka</text>
+        <circle cx="267" cy="278" r="25" fill="#DEE4F1"/><text x="267" y="282" font-size="10" class="strong">DO</text><text x="267" y="316" font-size="9" class="muted">David</text>
+        <circle cx="339" cy="278" r="25" fill="none" stroke="#9CB6A9" stroke-width="1.5" stroke-dasharray="4 3"/><path d="M334 278h10m-5-5v10" class="line" stroke="#0A6B52"/><text x="339" y="316" font-size="9" class="muted">New</text>
+      </g>
+
+      <text x="165" y="378" text-anchor="middle" font-size="52" font-weight="700">$250</text><text x="236" y="378" font-size="30" font-weight="500" fill="#91A39A">.00</text>
+      <rect x="286" y="337" width="2.5" height="47" rx="1" fill="#0A6B52"/>
+      <rect x="107" y="397" width="176" height="32" rx="16" fill="#DDF3EA"/>
+      <path d="M126 405l-4 9h6l-2 7 8-11h-6l2-5z" fill="#0A6B52"/>
+      <text x="202" y="418" text-anchor="middle" class="tiny green strong">No fee · Arrives instantly</text>
+      <g font-size="11" text-anchor="middle" font-weight="700">
+        <rect x="20" y="443" width="78" height="34" rx="17" fill="#fff"/><text x="59" y="465">$50</text>
+        <rect x="108" y="443" width="78" height="34" rx="17" fill="#fff"/><text x="147" y="465">$100</text>
+        <rect x="196" y="443" width="78" height="34" rx="17" fill="#0B3B2E"/><text x="235" y="465" fill="#fff">$250</text>
+        <rect x="284" y="443" width="78" height="34" rx="17" fill="#fff"/><text x="323" y="465">$500</text>
+      </g>
+      <g text-anchor="middle" font-size="21" font-weight="700">
+        <text x="75" y="529">1</text><text x="195" y="529">2</text><text x="315" y="529">3</text>
+        <text x="75" y="584">4</text><text x="195" y="584">5</text><text x="315" y="584">6</text>
+        <text x="75" y="639">7</text><text x="195" y="639">8</text><text x="315" y="639">9</text>
+        <text x="75" y="694" font-size="20">.</text><text x="195" y="694">0</text>
+      </g>
+      <path d="M306 680h16l8 8-8 8h-16zM306 688h13" class="line" stroke="#10201B"/>
+      <path d="M44 508h62M164 508h62M284 508h62M44 563h62M164 563h62M284 563h62M44 618h62M164 618h62M284 618h62M44 673h62M164 673h62M284 673h62" stroke="#E8ECE9" stroke-width="1"/>
+      <rect x="18" y="753" width="354" height="58" rx="18" fill="#0A6B52" filter="url(#softShadow)"/>
+      <text x="195" y="789" text-anchor="middle" font-size="15" class="white heavy">Continue</text>
+    </g>
+    <rect width="390" height="844" rx="44" fill="none" stroke="#1B2924" stroke-width="2"/>
+  </g>
+
+  <!-- Screen 3: Review Transfer -->
+  <g transform="translate(1407 150) scale(1.4)">
+    <rect width="390" height="844" rx="44" class="screen" filter="url(#shadow)"/>
+    <g clip-path="url(#clip3)">
+      <rect width="390" height="844" class="screen"/>
+      <circle cx="42" cy="78" r="21" fill="#fff"/><path d="M47 70l-8 8 8 8m-8-8h15" class="line" stroke="#10201B"/>
+      <text x="195" y="83" text-anchor="middle" font-size="16" class="heavy">Review Transfer</text>
+      <circle cx="195" cy="151" r="38" fill="#fff" filter="url(#softShadow)"/>
+      <text x="195" y="157" text-anchor="middle" font-size="19" class="strong">CO</text>
+      <circle cx="222" cy="176" r="12" fill="#0A6B52"/><path d="M217 176h8m-3-3 3 3-3 3" class="line" stroke="#fff" stroke-width="1.5"/>
+      <text x="195" y="216" text-anchor="middle" class="small muted">You're sending</text>
+      <text x="170" y="261" text-anchor="middle" font-size="38" class="heavy">$250</text><text x="222" y="261" font-size="21" font-weight="600" fill="#8A9791">.00</text>
+      <text x="195" y="286" text-anchor="middle" class="body muted">to <tspan class="strong" fill="#10201B">Chiamaka Obi</tspan></text>
+
+      <rect x="18" y="311" width="354" height="350" rx="21" class="card"/>
+      <text x="36" y="341" class="small muted">Recipient</text><text x="354" y="341" text-anchor="end" class="small strong">Chiamaka Obi</text>
+      <path d="M36 356h318" stroke="#EEF1F0"/>
+      <text x="36" y="385" class="small muted">Account</text><text x="354" y="385" text-anchor="end" class="small strong">GTBank · 0812 345 6789</text>
+      <path d="M36 400h318" stroke="#EEF1F0"/>
+      <text x="36" y="429" class="small muted">From</text><text x="354" y="429" text-anchor="end" class="small strong">USD account · Tega</text>
+      <path d="M36 444h318" stroke="#EEF1F0"/>
+      <text x="36" y="473" class="small muted">Transfer fee</text><text x="354" y="473" text-anchor="end" class="small green strong">Free</text>
+      <path d="M36 488h318" stroke="#EEF1F0"/>
+      <text x="36" y="517" class="small muted">Arrives</text><text x="354" y="517" text-anchor="end" class="small strong">Instantly</text>
+      <path d="M36 532h318" stroke="#EEF1F0"/>
+      <text x="36" y="561" class="small muted">Note</text><text x="354" y="561" text-anchor="end" class="small strong">Saturday dinner</text>
+      <path d="M36 576h318" stroke="#EEF1F0"/>
+      <text x="36" y="614" class="label">Total</text><text x="354" y="614" text-anchor="end" font-size="16" class="heavy">$250.00</text>
+      <path d="M117 691l2 3 5-6" class="line" stroke="#5B6B65"/>
+      <rect x="116" y="688" width="15" height="17" rx="3" fill="none" stroke="#5B6B65" stroke-width="1.5"/>
+      <text x="140" y="701" class="tiny muted">You'll confirm with your Vela PIN</text>
+      <rect x="18" y="727" width="354" height="57" rx="18" fill="#0A6B52" filter="url(#softShadow)"/>
+      <text x="195" y="762" text-anchor="middle" class="white strong" font-size="15">Send $250.00</text>
+      <text x="195" y="814" text-anchor="middle" class="small muted strong">Cancel</text>
+    </g>
+    <rect width="390" height="844" rx="44" fill="none" stroke="#1B2924" stroke-width="2"/>
+  </g>
+
+  <!-- Screen 4: Money Sent -->
+  <g transform="translate(147 1428) scale(1.4)">
+    <rect width="390" height="844" rx="44" class="screen" filter="url(#shadow)"/>
+    <g clip-path="url(#clip4)">
+      <rect width="390" height="844" class="screen"/>
+      <circle cx="195" cy="166" r="87" fill="#EFF8D8"/>
+      <circle cx="195" cy="166" r="69" fill="none" stroke="#D8FA7A" stroke-width="9"/>
+      <circle cx="195" cy="166" r="53" fill="#0A6B52"/>
+      <path d="M173 166l15 15 31-33" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="195" y="297" text-anchor="middle" font-size="28" class="heavy">Money sent!</text>
+      <text x="195" y="324" text-anchor="middle" class="body muted">$250.00 is on its way to Chiamaka Obi.</text>
+      <text x="195" y="344" text-anchor="middle" class="body muted">She'll get it in a few seconds.</text>
+
+      <rect x="22" y="382" width="346" height="258" rx="22" fill="#fff" stroke="#A8D8C1" stroke-width="1.5" stroke-dasharray="5 4"/>
+      <text x="44" y="413" class="small muted">Amount</text><text x="346" y="413" text-anchor="end" class="label">$250.00</text>
+      <path d="M44 430h302" stroke="#EEF1F0"/>
+      <text x="44" y="460" class="small muted">To</text><text x="346" y="460" text-anchor="end" class="label">Chiamaka Obi</text>
+      <path d="M44 477h302" stroke="#EEF1F0"/>
+      <text x="44" y="507" class="small muted">Date</text><text x="346" y="507" text-anchor="end" class="small strong">1 Nov 2026, 7:42 PM</text>
+      <path d="M44 524h302" stroke="#EEF1F0"/>
+      <text x="44" y="554" class="small muted">Reference</text><text x="346" y="554" text-anchor="end" class="small strong">VLA-82731-TX</text>
+      <path d="M44 571h302" stroke="#EEF1F0"/>
+      <text x="44" y="607" class="small muted">Status</text>
+      <rect x="265" y="585" width="81" height="27" rx="14" fill="#DDF3EA"/>
+      <circle cx="279" cy="598.5" r="4" fill="#0A6B52"/><text x="310" y="603" text-anchor="middle" class="tiny green strong">Completed</text>
+
+      <rect x="18" y="689" width="354" height="54" rx="17" fill="#fff" stroke="#DCE5E0"/>
+      <path d="M165 710l11 6-11 6v-4q-12-1-12-9 5 5 12 4z" class="line" stroke="#0A6B52"/>
+      <text x="230" y="723" text-anchor="middle" class="label">Share receipt</text>
+      <rect x="18" y="758" width="354" height="58" rx="18" fill="#0A6B52" filter="url(#softShadow)"/>
+      <text x="195" y="794" text-anchor="middle" class="white strong" font-size="15">Back to Home</text>
+    </g>
+    <rect width="390" height="844" rx="44" fill="none" stroke="#1B2924" stroke-width="2"/>
+  </g>
+
+  <!-- Screen 5: Add Money -->
+  <g transform="translate(777 1428) scale(1.4)">
+    <rect width="390" height="844" rx="44" class="screen" filter="url(#shadow)"/>
+    <g clip-path="url(#clip5)">
+      <rect width="390" height="844" class="screen"/>
+      <circle cx="42" cy="78" r="21" fill="#fff"/><path d="M47 70l-8 8 8 8m-8-8h15" class="line" stroke="#10201B"/>
+      <text x="195" y="83" text-anchor="middle" font-size="16" class="heavy">Add Money</text>
+      <rect x="18" y="111" width="354" height="64" rx="17" class="card"/>
+      <text x="36" y="150" class="small muted">USD balance</text>
+      <text x="354" y="149" text-anchor="end" font-size="16" class="heavy">$24,560<tspan fill="#91A39A" font-size="11">.40</tspan></text>
+      <text x="20" y="208" class="label">Choose how to add money</text>
+
+      <rect x="18" y="224" width="354" height="66" rx="17" fill="#fff" stroke="#0A6B52" stroke-width="1.5"/>
+      <rect x="31" y="236" width="42" height="42" rx="12" fill="#DDF3EA"/>
+      <path d="M42 247h20v20H42zm4 5h12m-12 5h12m-12 5h12" class="line" stroke="#0A6B52"/>
+      <text x="85" y="252" class="label">Bank transfer</text><text x="85" y="271" class="tiny muted">Free · arrives in minutes</text>
+      <circle cx="348" cy="257" r="9" fill="none" stroke="#0A6B52" stroke-width="1.5"/><circle cx="348" cy="257" r="5" fill="#0A6B52"/>
+
+      <rect x="18" y="300" width="354" height="242" rx="18" fill="#EEF8F4" stroke="#A8D8C1" stroke-width="1.3" stroke-dasharray="5 4"/>
+      <text x="34" y="325" font-size="10" font-weight="800" letter-spacing="1.1" fill="#0A6B52">YOUR USD ACCOUNT DETAILS</text>
+      <text x="34" y="354" class="tiny muted">Account name</text><text x="356" y="354" text-anchor="end" class="small strong">Tega</text>
+      <path d="M34 364h322" stroke="#D7E9E0"/>
+      <text x="34" y="390" class="tiny muted">Account number</text><text x="263" y="390" text-anchor="end" class="small strong" letter-spacing=".5">2034 5578 21</text>
+      <rect x="304" y="373" width="45" height="24" rx="8" fill="#DDF3EA"/>
+      <path d="M317 381h10v10h-10zm3-3h10v10" class="line" stroke="#0A6B52" stroke-width="1.3"/>
+      <path d="M34 400h322" stroke="#D7E9E0"/>
+      <text x="34" y="426" class="tiny muted">Bank</text><text x="356" y="426" text-anchor="end" class="small strong">Vela MFB</text>
+      <path d="M34 436h322" stroke="#D7E9E0"/>
+      <text x="34" y="462" class="tiny muted">Account type</text><text x="356" y="462" text-anchor="end" class="small strong">USD current account</text>
+      <rect x="32" y="478" width="326" height="48" rx="15" fill="#0A6B52"/>
+      <text x="195" y="508" text-anchor="middle" class="small white strong">Share account details</text>
+
+      <rect x="18" y="555" width="354" height="66" rx="17" class="card"/>
+      <rect x="31" y="567" width="42" height="42" rx="12" fill="#EEF1F0"/>
+      <path d="M43 580h18v14H43zm3 0v-3h12v3" class="line" stroke="#5B6B65"/>
+      <text x="85" y="583" class="label">Debit card</text><text x="85" y="602" class="tiny muted">1.5% fee · instant</text>
+      <circle cx="348" cy="588" r="9" fill="none" stroke="#AAB6B0" stroke-width="1.5"/>
+
+      <rect x="18" y="631" width="354" height="66" rx="17" class="card"/>
+      <rect x="31" y="643" width="42" height="42" rx="12" fill="#EEF1F0"/>
+      <circle cx="49" cy="658" r="5" class="line" stroke="#5B6B65"/><circle cx="59" cy="670" r="4" class="line" stroke="#5B6B65"/><path d="M45 675q4-8 9 0m2 2q4-6 8 0" class="line" stroke="#5B6B65"/>
+      <text x="85" y="659" class="label">Request from a friend</text><text x="85" y="678" class="tiny muted">Send a payment link</text>
+      <circle cx="348" cy="664" r="9" fill="none" stroke="#AAB6B0" stroke-width="1.5"/>
+    </g>
+    <rect width="390" height="844" rx="44" fill="none" stroke="#1B2924" stroke-width="2"/>
+  </g>
+
+  <!-- Screen 6: Savings -->
+  <g transform="translate(1407 1428) scale(1.4)">
+    <rect width="390" height="844" rx="44" class="screen" filter="url(#shadow)"/>
+    <g clip-path="url(#clip6)">
+      <rect width="390" height="844" class="screen"/>
+      <text x="20" y="83" font-size="24" class="heavy">Savings</text>
+      <rect x="247" y="57" width="125" height="40" rx="20" fill="#0B3B2E"/>
+      <text x="309.5" y="82" text-anchor="middle" class="small white strong">+ New goal</text>
+
+      <rect x="18" y="111" width="354" height="217" rx="22" fill="url(#hero)"/>
+      <circle cx="338" cy="153" r="72" fill="#D8FA7A" opacity=".09"/>
+      <circle cx="338" cy="153" r="48" fill="#D8FA7A" opacity=".06"/>
+      <text x="38" y="145" class="small white" opacity=".75">Total savings</text>
+      <text x="38" y="190" font-size="33" class="white heavy">$3,240</text><text x="151" y="190" font-size="19" font-weight="600" fill="#A4B8AC">.00</text>
+      <rect x="38" y="204" width="133" height="27" rx="14" fill="#D8FA7A"/>
+      <text x="104.5" y="222" text-anchor="middle" class="tiny strong" fill="#16392B">Earning 8% yearly</text>
+      <text x="38" y="254" class="small white" opacity=".8">+$21.60 this month</text>
+      <rect x="38" y="272" width="146" height="40" rx="14" fill="#D8FA7A"/>
+      <text x="111" y="297" text-anchor="middle" class="small strong" fill="#10382A">+ Add money</text>
+      <rect x="195" y="272" width="141" height="40" rx="14" fill="#FFFFFF" fill-opacity=".08" stroke="#93AA9D" stroke-width="1"/>
+      <text x="265.5" y="297" text-anchor="middle" class="small white strong">Withdraw</text>
+
+      <text x="20" y="364" font-size="16" class="heavy">Your goals</text>
+      <text x="368" y="364" text-anchor="end" class="small green strong">See all</text>
+
+      <rect x="18" y="378" width="354" height="112" rx="19" class="card"/>
+      <rect x="31" y="391" width="40" height="40" rx="12" fill="#DDF3EA"/>
+      <path d="M40 405h22v13H40zm3-4h16v4H43zm5 18h6" class="line" stroke="#0A6B52"/>
+      <text x="82" y="402" class="label">New laptop</text><text x="82" y="419" class="tiny muted">Saving $150 every week</text>
+      <text x="352" y="405" text-anchor="end" class="small green strong">71%</text>
+      <rect x="82" y="433" width="270" height="5" rx="3" fill="#EEF1F0"/><rect x="82" y="433" width="192" height="5" rx="3" fill="#0A6B52"/>
+      <text x="82" y="469" class="tiny muted">$1,640 of $2,300</text>
+
+      <rect x="18" y="500" width="354" height="112" rx="19" class="card"/>
+      <rect x="31" y="513" width="40" height="40" rx="12" fill="#DDF3EA"/>
+      <path d="M39 537q12-20 24 0m-20-5h16m-12 7h8m-8-12 4-4 4 4" class="line" stroke="#0A6B52"/>
+      <text x="82" y="524" class="label">Trip to Zanzibar</text><text x="82" y="541" class="tiny muted">Target: March 2027</text>
+      <text x="352" y="527" text-anchor="end" class="small green strong">40%</text>
+      <rect x="82" y="555" width="270" height="5" rx="3" fill="#EEF1F0"/><rect x="82" y="555" width="108" height="5" rx="3" fill="#0A6B52"/>
+      <text x="82" y="591" class="tiny muted">$1,200 of $3,000</text>
+
+      <rect x="18" y="622" width="354" height="112" rx="19" class="card"/>
+      <rect x="31" y="635" width="40" height="40" rx="12" fill="#DDF3EA"/>
+      <path d="M51 641l13 5v9c0 8-6 13-13 16-7-3-13-8-13-16v-9zM45 655l4 4 8-9" class="line" stroke="#0A6B52"/>
+      <text x="82" y="646" class="label">Emergency fund</text><text x="82" y="663" class="tiny muted">Saving $100 every month</text>
+      <text x="352" y="649" text-anchor="end" class="small green strong">8%</text>
+      <rect x="82" y="677" width="270" height="5" rx="3" fill="#EEF1F0"/><rect x="82" y="677" width="22" height="5" rx="3" fill="#0A6B52"/>
+      <text x="82" y="713" class="tiny muted">$400 of $5,000</text>
+
+      <rect x="18" y="758" width="354" height="66" rx="24" fill="#fff" filter="url(#softShadow)"/>
+      <path d="M51 783h16v13H51zm3-4h10" class="line" stroke="#84918B"/><text x="59" y="808" text-anchor="middle" font-size="9" class="muted">Home</text>
+      <path d="M137 782h21v14h-21z" class="line" stroke="#84918B"/><text x="147" y="808" text-anchor="middle" font-size="9" class="muted">Cards</text>
+      <rect x="207" y="766" width="78" height="50" rx="18" fill="#DDF3EA"/>
+      <path d="M237 780h15v17h-15zM241 777h7" class="line" stroke="#0A6B52"/><text x="245" y="808" text-anchor="middle" font-size="9" class="green strong">Savings</text>
+      <circle cx="330" cy="785" r="7" class="line" stroke="#84918B"/><path d="M318 798q12-12 24 0" class="line" stroke="#84918B"/><text x="330" y="808" text-anchor="middle" font-size="9" class="muted">Me</text>
+    </g>
+    <rect width="390" height="844" rx="44" fill="none" stroke="#1B2924" stroke-width="2"/>
+  </g>
+</svg>

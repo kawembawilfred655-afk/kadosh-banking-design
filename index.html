@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#E2E3DF">
+    <meta name="description" content="Vela banking app design board featuring six core mobile screens.">
+    <title>Vela — Mobile Banking Screens</title>
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: #e2e3df;
+        color: #0b3b2e;
+        font: 500 14px/1.5 "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        max-width: 1540px;
+        margin: auto;
+        padding: 22px 28px;
+      }
+      .brand { font-size: 15px; font-weight: 800; letter-spacing: 3px; }
+      nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px; }
+      nav a {
+        padding: 9px 14px;
+        border: 1px solid #ccd3ce;
+        border-radius: 999px;
+        color: #0b3b2e;
+        font-size: 12px;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      nav a:hover, nav a:focus-visible { background: white; }
+      main { padding: 0 18px 30px; text-align: center; }
+      main img {
+        display: block;
+        width: min(100%, 1500px);
+        height: auto;
+        margin: 0 auto;
+        border-radius: 16px;
+        box-shadow: 0 16px 44px rgb(16 32 27 / 12%);
+      }
+      @media (max-width: 560px) {
+        header { align-items: flex-start; flex-direction: column; padding: 18px; }
+        nav { justify-content: flex-start; }
+        main { padding: 0 8px 18px; }
+        main img { border-radius: 8px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="brand">VELA</div>
+      <nav aria-label="Download design files">
+        <a href="./vela-banking-board.svg">Vector SVG</a>
+        <a href="./vela-banking-board.png">High-res PNG</a>
+        <a href="./vela-banking-board.pdf">Vector PDF</a>
+      </nav>
+    </header>
+    <main>
+      <img src="./vela-banking-board.svg" alt="Vela mobile banking design board showing six screens in a three-column, two-row layout.">
+    </main>
+  </body>
+</html>
